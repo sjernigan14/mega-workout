@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagree Megaformer Classes — MEGA | Raleigh & Cary, NC</title>
+  <meta name="description" content="Experience the Lagree Method on the Megaformer at MEGA. High-intensity, low-impact total body workout. The Triangle's only Lagree studio in Raleigh and Cary.">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root { --pink: #E91E8C; --pink-light: #FFF0F5; --pink-dark: #C4167A; --teal: #2ECDA7; --teal-light: #E6FBF5; --black: #1A1A1A; --white: #FFFFFF; --gray-50: #FAFAFA; --gray-100: #F5F5F5; --gray-200: #E5E5E5; --gray-400: #A3A3A3; --gray-600: #525252; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-icon { width: 44px; height: 44px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .nav-logo-icon span { color: var(--black); font-weight: 900; font-size: 18px; letter-spacing: -1px; }
+    .nav-logo-text { font-weight: 900; font-size: 22px; letter-spacing: 3px; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--gray-600); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--pink); }
+    .nav-cta { background: var(--pink); color: white !important; padding: 10px 24px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--pink-dark); }
+    .btn-primary { background: var(--pink); color: white; padding: 16px 36px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.25s; display: inline-block; border: none; cursor: pointer; }
+    .btn-primary:hover { background: var(--pink-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(233,30,140,0.4); }
+
+    /* PAGE HERO */
+    .page-hero { padding: 140px 0 80px; background: var(--black); color: white; position: relative; overflow: hidden; }
+    .page-hero-pattern { position: absolute; inset: 0; opacity: 0.05; background: repeating-linear-gradient(45deg, transparent, transparent 20px, var(--pink) 20px, var(--pink) 22px); }
+    .page-hero-content { position: relative; z-index: 2; }
+    .page-hero .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .page-hero .breadcrumb a { color: var(--teal); }
+    .page-hero .badge { display: inline-block; background: rgba(233,30,140,0.15); color: var(--pink); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(233,30,140,0.3); }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: 60px; font-weight: 700; line-height: 1.1; max-width: 650px; margin-bottom: 20px; }
+    .page-hero .subtitle { font-size: 18px; color: rgba(255,255,255,0.65); max-width: 550px; line-height: 1.7; }
+
+    /* WHAT IS IT */
+    .what-section { padding: 80px 0; }
+    .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .section-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--pink); margin-bottom: 12px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; margin-bottom: 16px; line-height: 1.15; }
+    .body-text { font-size: 16px; color: var(--gray-600); line-height: 1.8; margin-bottom: 20px; }
+
+    /* BENEFITS GRID */
+    .benefits { padding: 80px 0; background: var(--gray-50); }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .benefit-card { background: white; border-radius: 16px; padding: 32px; text-align: center; transition: all 0.3s; }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .benefit-icon { width: 56px; height: 56px; background: var(--pink-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px; }
+    .benefit-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+    .benefit-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+
+    /* WHAT TO EXPECT */
+    .expect { padding: 80px 0; }
+    .expect-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+    .expect-step { text-align: center; padding: 24px; }
+    .expect-num { width: 48px; height: 48px; background: var(--teal); color: var(--black); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; margin: 0 auto 16px; }
+    .expect-step h3 { font-size: 16px; font-weight: 800; margin-bottom: 8px; }
+    .expect-step p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+
+    /* FAQ */
+    .faq { padding: 80px 0; background: var(--gray-50); }
+    .faq-list { max-width: 700px; margin: 48px auto 0; }
+    .faq-item { background: white; border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { padding: 20px 24px; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+    .faq-q:hover { background: var(--gray-50); }
+    .faq-a { padding: 0 24px 20px; font-size: 15px; color: var(--gray-600); line-height: 1.7; }
+    .faq-toggle { font-size: 20px; color: var(--pink); font-weight: 300; transition: transform 0.3s; }
+
+    /* CTA */
+    .cta-band { padding: 80px 0; background: var(--pink); text-align: center; color: white; }
+    .cta-band h2 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 16px; }
+    .cta-band p { font-size: 17px; opacity: 0.9; margin-bottom: 32px; }
+    .btn-white { background: white; color: var(--pink); padding: 16px 40px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; display: inline-block; transition: all 0.25s; }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+    /* MACHINE VISUAL */
+    .machine-visual { background: var(--black); border-radius: 20px; padding: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 360px; position: relative; overflow: hidden; }
+    .machine-label { background: var(--teal); color: var(--black); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; }
+    .machine-title { font-family: 'Playfair Display', serif; font-size: 32px; color: white; text-align: center; margin-bottom: 12px; }
+    .machine-desc { font-size: 14px; color: rgba(255,255,255,0.6); text-align: center; max-width: 300px; line-height: 1.6; }
+
+    /* FOOTER */
+    .footer { background: var(--black); color: white; padding: 48px 0 24px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+    .footer-links-row { display: flex; gap: 24px; }
+    .footer-links-row a { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+    .footer-links-row a:hover { color: var(--pink); }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 36px; }
+      .what-grid { grid-template-columns: 1fr; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .expect-steps { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState } = React;
+
+    const Nav = () => (
+      <nav className="nav">
+        <div className="nav-inner">
+          <a href="homepage_FINAL.html" className="nav-logo">
+            <div className="nav-logo-icon"><span>M</span></div>
+            <span className="nav-logo-text">Mega</span>
+          </a>
+          <div className="nav-links">
+            <a href="lagree_FINAL.html" className="active">Lagree</a>
+            <a href="tramp_FINAL.html">Tramp</a>
+            <a href="mat_FINAL.html">Mat</a>
+            <a href="raleigh_FINAL.html">Raleigh</a>
+            <a href="cary_FINAL.html">Cary</a>
+            <a href="first_timer_FINAL.html">New Here?</a>
+            <a href="pricing_FINAL.html">Pricing</a>
+            <a href="#" className="nav-cta">Book a Class</a>
+          </div>
+        </div>
+      </nav>
+    );
+
+    const Hero = () => (
+      <section className="page-hero">
+        <div className="page-hero-pattern"></div>
+        <div className="container page-hero-content">
+          <div className="breadcrumb"><a href="homepage_FINAL.html">Home</a> / Classes / Lagree Megaformer</div>
+          <div className="badge">Signature Format</div>
+          <h1>Lagree Megaformer</h1>
+          <p className="subtitle">50 minutes of slow, controlled, muscle-quivering intensity on the Megaformer machine. Low impact. High results. The workout that put MEGA on the map.</p>
+        </div>
+      </section>
+    );
+
+    const WhatIsIt = () => (
+      <section className="what-section">
+        <div className="container">
+          <div className="what-grid">
+            <div>
+              <div className="section-label">The Method</div>
+              <div className="section-title">What Is Lagree?</div>
+              <p className="body-text">Lagree Fitness is a high-intensity, low-impact workout created by Sebastien Lagree. It's performed on the Megaformer — a spring-based resistance machine that targets every muscle group through slow, controlled movements.</p>
+              <p className="body-text">Unlike traditional Pilates, Lagree combines strength, cardio, balance, flexibility, and core training into one efficient session. The slow tempo and constant tension mean your muscles are working the entire time — no rest, no cheating, no coasting.</p>
+              <p className="body-text">MEGA is the Triangle's first and only Lagree studio, and our instructors are rigorously trained and certified in the Lagree Method.</p>
+            </div>
+            <div className="machine-visual">
+              <div className="machine-label">The Machine</div>
+              <div className="machine-title">The Megaformer</div>
+              <div className="machine-desc">A patented spring-based resistance machine with a gliding carriage, handles, and platforms. Adjustable springs let you scale intensity from accessible to advanced.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+
+    const Benefits = () => {
+      const items = [
+        { icon: '💪', title: 'Full-Body Strength', desc: 'Every class works upper body, lower body, and core through compound movements.' },
+        { icon: '🫀', title: 'Cardio Endurance', desc: 'The slow-burn tempo keeps your heart rate elevated throughout the full 50 minutes.' },
+        { icon: '🦴', title: 'Joint-Friendly', desc: 'Zero jumping, zero impact. Spring resistance is gentle on knees, hips, and shoulders.' },
+        { icon: '🔥', title: 'Calorie Torch', desc: 'The afterburn is real. Expect to burn calories for hours after class.' },
+        { icon: '🧘', title: 'Core & Balance', desc: 'The unstable carriage forces constant core engagement and proprioceptive challenge.' },
+        { icon: '⚡', title: 'Efficient', desc: '50 minutes is all you need. No warm-up class, no cool-down class — it\'s all built in.' },
+      ];
+      return (
+        <section className="benefits">
+          <div className="container">
+            <div style={{ textAlign: 'center' }}>
+              <div className="section-label">Why Lagree?</div>
+              <div className="section-title">The Benefits</div>
+            </div>
+            <div className="benefits-grid">
+              {items.map((b, i) => (
+                <div key={i} className="benefit-card">
+                  <div className="benefit-icon">{b.icon}</div>
+                  <h3>{b.title}</h3>
+                  <p>{b.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    const Expect = () => {
+      const steps = [
+        { title: 'Arrive Early', desc: 'Get to the studio 10 minutes before class for check-in and machine setup.' },
+        { title: 'Get Set Up', desc: 'Your instructor will show you the Megaformer and adjust springs for your level.' },
+        { title: 'The Workout', desc: '50 minutes of slow-tempo, high-intensity sequences targeting the full body.' },
+        { title: 'The Afterglow', desc: 'Stretch, hydrate, and feel the shake. Expect soreness (the good kind) for 2 days.' },
+      ];
+      return (
+        <section className="expect">
+          <div className="container">
+            <div style={{ textAlign: 'center' }}>
+              <div className="section-label">Your First Class</div>
+              <div className="section-title">What to Expect</div>
+            </div>
+            <div className="expect-steps">
+              {steps.map((s, i) => (
+                <div key={i} className="expect-step">
+                  <div className="expect-num">{i + 1}</div>
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    const FAQ = () => {
+      const [openIdx, setOpenIdx] = useState(null);
+      const faqs = [
+        { q: 'Do I need experience with Pilates or Lagree?', a: 'Not at all. Every class is designed to accommodate all fitness levels. Your instructor will offer modifications and progressions throughout.' },
+        { q: 'What should I wear?', a: 'Fitted, moisture-wicking clothes work best — the Megaformer has a gliding carriage, so loose fabric can get caught. Grippy socks are required (we sell them or you can bring your own).' },
+        { q: 'How is Lagree different from Pilates?', a: 'While inspired by Pilates principles, Lagree adds a high-intensity cardio element and uses the spring-loaded Megaformer machine. The slow tempo and constant tension create a much more challenging workout.' },
+        { q: 'How often should I take class?', a: 'We recommend 3-4 times per week for optimal results. The low-impact nature means your joints can handle the frequency even if your muscles are sore.' },
+        { q: 'Is it okay if I\'m pregnant?', a: 'Yes! Our instructors are trained in pre and post-natal modifications. Just let your instructor know before class so they can guide you through safe alternatives.' },
+      ];
+      return (
+        <section className="faq">
+          <div className="container">
+            <div style={{ textAlign: 'center' }}>
+              <div className="section-label">Got Questions?</div>
+              <div className="section-title">Lagree FAQ</div>
+            </div>
+            <div className="faq-list">
+              {faqs.map((f, i) => (
+                <div key={i} className="faq-item">
+                  <div className="faq-q" onClick={() => setOpenIdx(openIdx === i ? null : i)}>
+                    {f.q}
+                    <span className="faq-toggle" style={{ transform: openIdx === i ? 'rotate(45deg)' : 'none' }}>+</span>
+                  </div>
+                  {openIdx === i && <div className="faq-a">{f.a}</div>}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    const CTA = () => (
+      <section className="cta-band">
+        <h2>Ready to Shake?</h2>
+        <p>Book your first Lagree class and see why the Megaformer is everyone's favorite machine.</p>
+        <a href="first_timer_FINAL.html" className="btn-white">Get the Intro Pack — $40</a>
+      </section>
+    );
+
+    const Footer = () => (
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-inner">
+            <span className="footer-copy">© 2026 The MEGA Workout</span>
+            <div className="footer-links-row">
+              <a href="homepage_FINAL.html">Home</a>
+              <a href="tramp_FINAL.html">Tramp</a>
+              <a href="mat_FINAL.html">Mat</a>
+              <a href="pricing_FINAL.html">Pricing</a>
+              <a href="first_timer_FINAL.html">New Here?</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    );
+
+    const App = () => (
+      <div>
+        <Nav />
+        <Hero />
+        <WhatIsIt />
+        <Benefits />
+        <Expect />
+        <FAQ />
+        <CTA />
+        <Footer />
+      </div>
+    );
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
