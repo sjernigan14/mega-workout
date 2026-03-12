@@ -3,18 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MEGA | Lagree, Mat Pilates & Tramp Cardio â Raleigh & Cary, NC</title>
+  <title>MEGA | Lagree, Mat Pilates & Tramp Cardio — Raleigh & Cary, NC</title>
   <meta name="description" content="MEGA is the Triangle's only Lagree Megaformer, Mat Pilates, and Tramp Cardio studio. Two locations in Raleigh and Cary, NC. Book your first class today.">
+  <meta property="og:title" content="MEGA | Lagree, Mat Pilates & Tramp Cardio — Raleigh & Cary, NC | MEGA Workout">
+  <meta property="og:description" content="MEGA is the Triangle's only Lagree Megaformer, Mat Pilates, and Tramp Cardio studio. Two locations in Raleigh and Cary, NC. Book your first class today.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sjernigan14.github.io/mega-workout/homepage_FINAL.html">
+  <meta property="og:site_name" content="MEGA Workout">
+  <link rel="canonical" href="https://sjernigan14.github.io/mega-workout/homepage_FINAL.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://sjernigan14.github.io/mega-workout/"
+      }
+    ]
+  }
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1" rel="stylesheet">
   <style>
     :root {
-      --pink: #00C389;     /* MEGA Emerald â primary brand */
+      --pink: #00C389;     /* MEGA Emerald — primary brand */
       --pink-light: #E6F9F2;
       --pink-dark: #009B6A;
-      --teal: #58F095;     /* Lime â secondary accent */
+      --teal: #58F095;     /* Lime — secondary accent */
       --teal-light: #EAFCE8;
       --black: #222223;
       --white: #FFFFFF;
@@ -202,6 +222,7 @@
               <a href="cary_FINAL.html">Cary</a>
               <a href="first_timer_FINAL.html">New Here?</a>
               <a href="pricing_FINAL.html">Pricing</a>
+              <a href="blog_index.html">Blog</a>
               <a href="#" className="nav-cta">Book a Class</a>
             </div>
             <button className="mobile-menu-btn">
@@ -218,8 +239,8 @@
         <div className="hero-pattern"></div>
         <div className="hero-content">
           <div className="hero-badge">The Triangle's Only Lagree Studio</div>
-          <h1>Workouts That Are <em>MEGA</em> Effective & MEGA Fun</h1>
-          <p className="hero-sub">Three signature formats. Two studios. One community that will push you, hype you, and make you sweat â all while having the time of your life.</p>
+          <h1>One Membership. <em>Three</em> Ways to Shake.</h1>
+          <p className="hero-sub">Lagree. Tramp. Mat. Pick your vibe. We'll bring the burn and the laughs.</p>
           <div className="hero-actions">
             <a href="first_timer_FINAL.html" className="btn-primary">First Timer? Start Here</a>
             <a href="#formats" className="btn-outline">Explore Classes</a>
@@ -244,22 +265,22 @@
 
     const PromoBar = () => (
       <div className="promo-bar">
-        New to MEGA? <span>3 classes for $40</span> â Grippy socks included &rarr;
+        New to MEGA? <span>3 classes for $40</span> — Grippy socks included &rarr;
       </div>
     );
 
     const Formats = () => {
       const formats = [
-        { name: 'Lagree Megaformer', badge: 'Signature', tags: ['Full Body', 'Low Impact', 'High Intensity', 'Springs'], desc: 'The workout that started it all. 50 minutes on the Megaformer machine â slow, controlled movements that make your muscles shake in the best way possible.', link: 'lagree_FINAL.html', gradient: 'linear-gradient(135deg, #2d1a2d, #1a1a2d)' },
-        { name: 'Mega Tramp', badge: 'Cardio', tags: ['Trampoline', 'Heart-Pumping', 'Sculpt', 'Fun'], desc: 'High-energy trampoline cardio meets sculpting. Jump, bounce, and tone â all set to playlists that make you forget you\'re working out.', link: 'tramp_FINAL.html', gradient: 'linear-gradient(135deg, #1a2d1a, #1a1a2d)' },
-        { name: 'Mega Mat', badge: 'Pilates', tags: ['Mat Pilates', 'Core', 'Flexibility', 'Heated Option'], desc: 'Classical Pilates with a MEGA twist. Build deep core strength, improve flexibility, and lengthen your muscles. Now offering Heated Mat sessions.', link: 'mat_FINAL.html', gradient: 'linear-gradient(135deg, #2d1a1a, #2d2d1a)' }
+        { name: 'Lagree Megaformer', badge: 'Signature', tags: ['Full Body', 'Low Impact', 'High Intensity', 'Springs'], desc: 'Slow. Heavy. Shaky. You\'ll spend 50 minutes on the Megaformer and feel every second. No momentum, no cheating — just you and the springs. Your muscles will thank you (eventually).', link: 'lagree_FINAL.html', gradient: 'linear-gradient(135deg, #2d1a2d, #1a1a2d)' },
+        { name: 'Mega Tramp', badge: 'Cardio', tags: ['Trampoline', 'Heart-Pumping', 'Sculpt', 'Fun'], desc: 'Jump. Bounce. Feel that natural high. Our playlists hit different and before you know it, class is over and you\'re drenched. This is the fun cardio you actually want to come back for.', link: 'tramp_FINAL.html', gradient: 'linear-gradient(135deg, #1a2d1a, #1a1a2d)' },
+        { name: 'Mega Mat', badge: 'Pilates', tags: ['Mat Pilates', 'Core', 'Flexibility', 'Heated Option'], desc: 'Spicy sequences. Mindful breathing. Serious core work. Our Mat classes are for anyone who wants to build strength, lengthen, and actually feel strong in their body. Try the Heated version if you like a challenge.', link: 'mat_FINAL.html', gradient: 'linear-gradient(135deg, #2d1a1a, #2d2d1a)' }
       ];
       return (
         <section className="formats" id="formats">
           <div className="container">
             <div className="section-label">Three Ways to Sweat</div>
             <div className="section-title">Find Your Format</div>
-            <div className="section-desc">Every class brings the vibe, the burn, and the results. Whether you want to shake on the Megaformer, bounce on the tramp, or flow on the mat â we've got you.</div>
+            <div className="section-desc">Same MEGA energy. Different ways to sweat. Try one, try all three — there's a format made for YOUR body and YOUR goals. No judgment. Just results.</div>
             <div className="format-grid">
               {formats.map((f, i) => (
                 <a href={f.link} key={i} className="format-card">
@@ -285,15 +306,15 @@
 
     const Locations = () => {
       const locs = [
-        { name: 'MEGA Raleigh', address: '2330 Bale Street, Ste 104', city: 'Raleigh, NC 27608', hours: 'MonâThu 6amâ7pm Â· Fri 6amâ1pm Â· Sat 8amâ12pm Â· Sun 9amâ1pm', status: 'Open', amenities: ['Megaformer', 'Tramp Cardio', 'Mat Pilates', 'Heated Mat', 'Retail'], link: 'raleigh_FINAL.html' },
-        { name: 'MEGA Cary', address: '249 E. Chatham Street', city: 'Cary, NC 27511', hours: 'MonâThu 6amâ7pm Â· Fri 6amâ1pm Â· Sat 8amâ12pm Â· Sun 9amâ1pm', status: 'Now Open!', amenities: ['Megaformer', 'Tramp Cardio', 'Mat Pilates', 'New Studio'], link: 'cary_FINAL.html' }
+        { name: 'MEGA Raleigh', address: '2330 Bale Street, Ste 104', city: 'Raleigh, NC 27608', hours: 'Mon–Thu 6am–7pm · Fri 6am–1pm · Sat 8am–12pm · Sun 9am–1pm', status: 'Open', amenities: ['Megaformer', 'Tramp Cardio', 'Mat Pilates', 'Heated Mat', 'Retail'], link: 'raleigh_FINAL.html' },
+        { name: 'MEGA Cary', address: '249 E. Chatham Street', city: 'Cary, NC 27511', hours: 'Mon–Thu 6am–7pm · Fri 6am–1pm · Sat 8am–12pm · Sun 9am–1pm', status: 'Now Open!', amenities: ['Megaformer', 'Tramp Cardio', 'Mat Pilates', 'New Studio'], link: 'cary_FINAL.html' }
       ];
       return (
         <section className="locations">
           <div className="container">
             <div className="section-label">Two Studios, One Community</div>
             <div className="section-title" style={{ color: 'white' }}>Find Your Studio</div>
-            <div className="section-desc">Raleigh's original and the brand-new Cary location. Same MEGA energy, same incredible instructors, same results.</div>
+            <div className="section-desc">Whether you're in Raleigh or Cary, you're getting the same vibe, the same fire instructors, and the same community that's got your back. Pick your studio. We're hyped either way.</div>
             <div className="location-grid">
               {locs.map((l, i) => (
                 <a href={l.link} key={i} className="location-card">
@@ -325,13 +346,13 @@
               <div className="section-title">Your First Class<br/>Is on Us (Almost)</div>
               <div className="ft-price">
                 <span className="ft-price-amount">$40</span>
-                <span className="ft-price-detail">for 3 classes Â· Any format Â· No commitment</span>
+                <span className="ft-price-detail">for 3 classes · Any format · No commitment</span>
               </div>
               <ul className="ft-perks">
-                <li><span className="ft-check">â</span> Try all 3 class formats</li>
-                <li><span className="ft-check">â</span> Free pair of grippy socks</li>
-                <li><span className="ft-check">â</span> No expiration pressure â use within 30 days</li>
-                <li><span className="ft-check">â</span> Valid at both Raleigh & Cary studios</li>
+                <li><span className="ft-check">✓</span> Try all 3 class formats</li>
+                <li><span className="ft-check">✓</span> Free pair of grippy socks</li>
+                <li><span className="ft-check">✓</span> No expiration pressure — use within 30 days</li>
+                <li><span className="ft-check">✓</span> Valid at both Raleigh & Cary studios</li>
               </ul>
               <a href="first_timer_FINAL.html" className="btn-primary">Claim Your Intro Pack</a>
             </div>
@@ -341,9 +362,9 @@
                 <h3>What to Expect</h3>
                 <p>Your first time? We'll walk you through everything.</p>
                 <div className="ft-steps">
-                  <div className="ft-step"><div className="ft-step-num">1</div><span className="ft-step-text">Book your class online or via the app</span></div>
-                  <div className="ft-step"><div className="ft-step-num">2</div><span className="ft-step-text">Arrive 10 minutes early for setup</span></div>
-                  <div className="ft-step"><div className="ft-step-num">3</div><span className="ft-step-text">Your instructor handles the rest</span></div>
+                  <div className="ft-step"><div className="ft-step-num">1</div><span className="ft-step-text">Book on our app or at the studio</span></div>
+                  <div className="ft-step"><div className="ft-step-num">2</div><span className="ft-step-text">Show up 10 min early, we'll get you set</span></div>
+                  <div className="ft-step"><div className="ft-step-num">3</div><span className="ft-step-text">Follow your instructor's lead</span></div>
                   <div className="ft-step"><div className="ft-step-num">4</div><span className="ft-step-text">Leave shaking, smiling, and hooked</span></div>
                 </div>
               </div>
@@ -355,9 +376,9 @@
 
     const SocialProof = () => {
       const reviews = [
-        { stars: 'âââââ', text: 'I\'ve tried every boutique studio in the Triangle and nothing comes close to MEGA. The Megaformer is no joke â my arms were shaking for two days.', author: 'Sarah M.', source: 'Google Review' },
-        { stars: 'âââââ', text: 'The tramp class is the most fun I\'ve had working out in years. The music is amazing, the energy is electric, and you burn SO many calories.', author: 'Jessica T.', source: 'Google Review' },
-        { stars: 'âââââ', text: 'Finally a studio that doesn\'t take itself too seriously. The instructors are tough but the vibe is pure fun. Already bought the 10-pack.', author: 'Michael R.', source: 'Google Review' },
+        { stars: '★★★★★', text: 'I\'ve tried every boutique studio in the Triangle and nothing comes close to MEGA. The Megaformer is no joke — my arms were shaking for two days.', author: 'Sarah M.', source: 'Google Review' },
+        { stars: '★★★★★', text: 'The tramp class is the most fun I\'ve had working out in years. The music is amazing, the energy is electric, and you burn SO many calories.', author: 'Jessica T.', source: 'Google Review' },
+        { stars: '★★★★★', text: 'Finally a studio that doesn\'t take itself too seriously. The instructors are tough but the vibe is pure fun. Already bought the 10-pack.', author: 'Michael R.', source: 'Google Review' },
       ];
       return (
         <section className="social-proof">
@@ -386,7 +407,7 @@
         <div className="cta-pattern"></div>
         <div className="cta-content">
           <h2>Ready to Get MEGA?</h2>
-          <p>Your strongest, most confident self is waiting. Let's go.</p>
+          <p>Your strongest self is waiting. You've got this.</p>
           <a href="#" className="btn-white">Book Your First Class</a>
         </div>
       </section>
@@ -401,7 +422,7 @@
                 <div className="nav-logo-icon"><svg viewBox="0 0 36 32" width="36" height="32" fill="none"><g fill="white"><rect x="0" y="0" width="5" height="32"/><rect x="31" y="0" width="5" height="32"/><polygon points="5,0 10,0 18,24 13,24"/><polygon points="26,0 31,0 23,24 18,24"/></g></svg></div>
                 <span className="nav-logo-text" style={{ color: 'white' }}>mega</span>
               </div>
-              <p className="footer-brand-text">The Triangle's only Lagree Megaformer, Tramp Cardio, and Mat Pilates studio. Two locations. One MEGA community.</p>
+              <p className="footer-brand-text">We're not here to mold you into anything. We're here to help you become stronger, more confident, and genuinely obsessed with working out. The vibe, the burn, and the results — that's MEGA.</p>
             </div>
             <div>
               <h4>Classes</h4>
@@ -430,9 +451,17 @@
                 <li><a href="#">Facebook</a></li>
               </ul>
             </div>
+            <div>
+              <h4>From the Blog</h4>
+              <ul className="footer-links">
+                <li><a href="blog_index.html">Latest Articles</a></li>
+                <li><a href="#">Fitness Tips</a></li>
+                <li><a href="#">Member Stories</a></li>
+              </ul>
+            </div>
           </div>
           <div className="footer-bottom">
-            <span className="footer-copy">Â© 2026 The MEGA Workout. All rights reserved.</span>
+            <span className="footer-copy">© 2026 The MEGA Workout. All rights reserved.</span>
             <div className="footer-social">
               <a href="#">IG</a>
               <a href="#">FB</a>
