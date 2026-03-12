@@ -3,294 +3,376 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-(
+  <title>MEGA Raleigh | Lagree, Mat Pilates & Tramp Cardio — Raleigh, NC</title>
+  <meta name="description" content="MEGA Raleigh location. Lagree Megaformer, Mat Pilates, and Trampoline Cardio classes in Raleigh, NC. Find us at 2330 Bale Street. Call 984-228-9649.">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data: LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MEGA Raleigh",
+    "image": "https://megaworkout.com/raleigh-studio.jpg",
+    "description": "Premium boutique fitness studio offering Lagree Megaformer, Mat Pilates, and Trampoline Cardio classes in Raleigh, NC.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2330 Bale Street Suite 104",
+      "addressLocality": "Raleigh",
+      "addressRegion": "NC",
+      "postalCode": "27608",
+      "addressCountry": "US"
+    },
+    "telephone": "984-228-9649",
+    "email": "info@megaworkout.com",
+    "url": "https://megaworkout.com/raleigh_FINAL.html",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "35.8083",
+      "longitude": "-78.6604"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "06:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "12:00"
+      }
+    ],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.google.com/maps/place/MEGA+Raleigh",
+      "https://www.instagram.com/megaworkoutraleigh"
+    ]
+  }
+  </script>
+
+  <style>
+    :root { --pink: #E91E8C; --pink-light: #FFF0F5; --pink-dark: #C4167A; --teal: #2ECDA7; --teal-light: #E6FBF5; --black: #1A1A1A; --white: #FFFFFF; --gray-50: #FAFAFA; --gray-100: #F5F5F5; --gray-200: #E5E5E5; --gray-400: #A3A3A3; --gray-600: #525252; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-icon { width: 44px; height: 44px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .nav-logo-icon span { color: var(--black); font-weight: 900; font-size: 18px; letter-spacing: -1px; }
+    .nav-logo-text { font-weight: 900; font-size: 22px; letter-spacing: 3px; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--gray-600); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--pink); }
+    .nav-cta { background: var(--pink); color: white !important; padding: 10px 24px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--pink-dark); }
+
+    /* BUTTONS */
+    .btn-primary { background: var(--pink); color: white; padding: 16px 36px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.25s; display: inline-block; border: none; cursor: pointer; }
+    .btn-primary:hover { background: var(--pink-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(233,30,140,0.4); }
+    .btn-secondary { background: white; color: var(--pink); border: 2px solid var(--pink); padding: 14px 32px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.25s; display: inline-block; cursor: pointer; }
+    .btn-secondary:hover { background: var(--pink-light); }
+    .btn-white { background: white; color: var(--pink); padding: 16px 40px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; display: inline-block; transition: all 0.25s; }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+    /* PAGE HERO */
+    .page-hero { padding: 140px 0 80px; background: var(--black); color: white; position: relative; overflow: hidden; }
+    .page-hero-pattern { position: absolute; inset: 0; opacity: 0.05; background: repeating-linear-gradient(45deg, transparent, transparent 20px, var(--pink) 20px, var(--pink) 22px); }
+    .page-hero-content { position: relative; z-index: 2; }
+    .page-hero .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .page-hero .breadcrumb a { color: var(--teal); }
+    .page-hero .badge { display: inline-block; background: rgba(46,205,167,0.15); color: var(--teal); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(46,205,167,0.3); }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: 60px; font-weight: 700; line-height: 1.1; max-width: 650px; margin-bottom: 20px; }
+    .page-hero .subtitle { font-size: 18px; color: rgba(255,255,255,0.65); max-width: 550px; line-height: 1.7; }
+    .page-hero-actions { display: flex; gap: 16px; margin-top: 32px; }
+    .page-hero-actions a { display: inline-flex; align-items: center; gap: 8px; }
+
+    /* STUDIO DETAILS CARD */
+    .studio-details { padding: 80px 0; }
+    .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .details-card { background: var(--gray-50); border-radius: 16px; padding: 40px; }
+    .details-card h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 24px; }
+    .detail-item { margin-bottom: 24px; }
+    .detail-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--pink); margin-bottom: 6px; }
+    .detail-value { font-size: 16px; font-weight: 600; color: var(--black); }
+    .detail-value a { color: var(--teal); transition: color 0.2s; }
+    .detail-value a:hover { color: var(--pink); }
+    .hours-list { font-size: 15px; color: var(--gray-600); line-height: 1.8; }
+
+    /* MAP PLACEHOLDER */
+    .map-container { background: var(--black); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px; position: relative; }
+    .map-icon { font-size: 56px; margin-bottom: 16px; }
+    .map-label { font-size: 14px; font-weight: 700; color: white; margin-bottom: 12px; }
+    .map-address { font-size: 13px; color: rgba(255,255,255,0.6); text-align: center; margin-bottom: 24px; max-width: 300px; }
+    .btn-map { background: var(--teal); color: var(--black); padding: 12px 28px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; display: inline-block; transition: all 0.25s; }
+    .btn-map:hover { background: #1aa896; transform: translateY(-2px); }
+
+    /* SECTION STYLES */
+    .section-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--pink); margin-bottom: 12px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; margin-bottom: 16px; line-height: 1.15; }
+    .body-text { font-size: 16px; color: var(--gray-600); line-height: 1.8; margin-bottom: 20px; }
+
+    /* CLASS FORMATS GRID */
+    .class-formats { padding: 80px 0; background: var(--gray-50); }
+    .formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .format-card { background: white; border-radius: 16px; padding: 32px; text-align: center; transition: all 0.3s; display: flex; flex-direction: column; }
+    .format-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .format-icon { width: 56px; height: 56px; background: var(--pink-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 28px; }
+    .format-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+    .format-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+    .format-card a { color: var(--teal); font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+
+    /* AMENITIES SECTION */
+    .amenities { padding: 80px 0; }
+    .amenities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .amenity-item { background: var(--pink-light); border-radius: 12px; padding: 24px; text-align: center; }
+    .amenity-icon { font-size: 32px; margin-bottom: 12px; }
+    .amenity-item h4 { font-size: 16px; font-weight: 800; color: var(--black); }
+
+    /* NEIGHBORHOODS SECTION */
+    .neighborhoods { padding: 80px 0; background: var(--gray-50); }
+    .neighborhoods-content { text-align: center; }
+    .neighborhoods-tags { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 32px; }
+    .neighborhood-tag { background: white; border: 2px solid var(--teal); color: var(--black); padding: 10px 24px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; }
+
+    /* FIRST TIMER CTA */
+    .cta-band { padding: 80px 0; background: var(--pink); text-align: center; color: white; }
+    .cta-band h2 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 16px; }
+    .cta-band p { font-size: 17px; opacity: 0.9; margin-bottom: 32px; }
+
+    /* FOOTER */
+    .footer { background: var(--black); color: white; padding: 48px 0 24px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+    .footer-links-row { display: flex; gap: 24px; }
+    .footer-links-row a { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+    .footer-links-row a:hover { color: var(--pink); }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 36px; }
+      .page-hero-actions { flex-direction: column; }
+      .page-hero-actions a { width: 100%; justify-content: center; }
+      .details-grid { grid-template-columns: 1fr; gap: 40px; }
+      .formats-grid { grid-template-columns: 1fr; }
+      .amenities-grid { grid-template-columns: 1fr 1fr; }
+      .neighborhoods-tags { flex-direction: column; }
+      .neighborhood-tag { width: 100%; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState } = React;
+
+    const Nav = () => (
+      <nav className="nav">
+        <div className="nav-inner">
+          <a href="homepage_FINAL.html" className="nav-logo">
+            <div className="nav-logo-icon"><span>M</span></div>
+            <span className="nav-logo-text">Mega</span>
+          </a>
+          <div className="nav-links">
+            <a href="lagree_FINAL.html">Lagree</a>
+            <a href="tramp_FINAL.html">Tramp</a>
+            <a href="mat_FINAL.html">Mat</a>
+            <a href="raleigh_FINAL.html" className="active">Raleigh</a>
+            <a href="cary_FINAL.html">Cary</a>
+            <a href="first_timer_FINAL.html">New Here?</a>
+            <a href="pricing_FINAL.html">Pricing</a>
+            <a href="#" className="nav-cta">Book a Class</a>
+          </div>
+        </div>
+      </nav>
+    );
+
+    const Hero = () => (
+      <section className="page-hero">
+        <div className="page-hero-pattern"></div>
+        <div className="container page-hero-content">
+          <div className="breadcrumb"><a href="homepage_FINAL.html">Home</a> / Locations / Raleigh</div>
+          <div className="badge">Now Open</div>
+          <h1>MEGA Raleigh</h1>
+          <p className="subtitle">2330 Bale Street Suite 104, Raleigh, NC 27608. Lagree, Mat Pilates, and Trampoline Cardio classes. Your new favorite fitness community.</p>
+          <div className="page-hero-actions">
+            <a href="https://www.google.com/maps/place/2330+Bale+Street+Suite+104,+Raleigh,+NC+27608" className="btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
+            <a href="tel:984-228-9649" className="btn-secondary">Call Us</a>
+            <a href="#" className="btn-secondary">Book a Class</a>
+          </div>
+        </div>
+      </section>
+    );
+
+    const StudioDetails = () => (
+      <section className="studio-details">
+        <div className="container">
+          <div className="details-grid">
+            <div className="details-card">
+              <h2>Studio Details</h2>
+              <div className="detail-item">
+                <div className="detail-label">Address</div>
+                <div className="detail-value">2330 Bale Street Suite 104<br/>Raleigh, NC 27608</div>
+              </div>
+              <div className="detail-item">
+                <div className="detail-label">Phone</div>
+                <div className="detail-value"><a href="tel:984-228-9649">984-228-9649</a></div>
+              </div>
+              <div className="detail-item">
+                <div className="detail-label">Email</div>
+                <div className="detail-value"><a href="mailto:info@megaworkout.com">info@megaworkout.com</a></div>
+              </div>
+              <div className="detail-item">
+                <div className="detail-label">Hours</div>
+                <div className="hours-list">
+                  Mon–Fri: 6:00 AM – 7:00 PM<br/>
+                  Sat–Sun: 8:00 AM – 12:00 PM
+                </div>
+              </div>
+            </div>
+            <div className="map-container">
+              <div className="map-icon">📍</div>
+              <div className="map-label">Raleigh Studio Location</div>
+              <div className="map-address">2330 Bale Street Suite 104, Raleigh, NC 27608</div>
+              <a href="https://www.google.com/maps/place/2330+Bale+Street+Suite+104,+Raleigh,+NC+27608" className="btn-map" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+
+    const ClassFormats = () => (
+      <section className="class-formats">
+        <div className="container">
+          <div style={{ textAlign: 'center' }}>
+            <div className="section-label">All Three Available Here</div>
+            <div className="section-title">Class Formats</div>
+          </div>
+          <div className="formats-grid">
+            <div className="format-card">
+              <div className="format-icon">💪</div>
+              <h3>Lagree Megaformer</h3>
+              <p>50 minutes of slow, controlled, muscle-quivering intensity on the Megaformer machine. Low impact. High results.</p>
+              <a href="lagree_FINAL.html">Learn More →</a>
+            </div>
+            <div className="format-card">
+              <div className="format-icon">🦘</div>
+              <h3>Trampoline Cardio</h3>
+              <p>Jump, bounce, and fly on our custom mini trampolines. Full-body cardio that's fun, low-impact, and addictive.</p>
+              <a href="tramp_FINAL.html">Learn More →</a>
+            </div>
+            <div className="format-card">
+              <div className="format-icon">🧘</div>
+              <h3>Mat Pilates</h3>
+              <p>Core-focused, full-body strengthening on our heated mat in a mindful, controlled environment.</p>
+              <a href="mat_FINAL.html">Learn More →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+
+    const Amenities = () => (
+      <section className="amenities">
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+            <div className="section-label">Studio Amenities</div>
+            <div className="section-title">What We've Got</div>
+          </div>
+          <div className="amenities-grid">
+            <div className="amenity-item">
+              <div className="amenity-icon">💪</div>
+              <h4>Megaformer Machines</h4>
+            </div>
+            <div className="amenity-item">
+              <div className="amenity-icon">🦘</div>
+              <h4>Mini Trampolines</h4>
+            </div>
+            <div className="amenity-item">
+              <div className="amenity-icon">🔥</div>
+              <h4>Heated Mat Room</h4>
+            </div>
+            <div className="amenity-item">
+              <div className="amenity-icon">🧦</div>
+              <h4>Grippy Sock Retail</h4>
+            </div>
+            <div className="amenity-item">
+              <div className="amenity-icon">💧</div>
+              <h4>Water Station</h4>
+            </div>
+            <div className="amenity-item">
+              <div className="amenity-icon">🚪</div>
+              <h4>Lockers & Changing Area</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+
+    const Neighborhoods = () => (
+      <section className="neighborhoods">
+        <div className="container neighborhoods-content">
+          <div className="section-label">Serving Raleigh</div>
+          <div className="section-title">Nearby Neighborhoods</div>
+          <div className="neighborhoods-tags">
+            <div className="neighborhood-tag">Five Points</div>
+            <div className="neighborhood-tag">ITB (Inside the Beltline)</div>
+            <div className="neighborhood-tag">Cameron Village</div>
+            <div className="neighborhood-tag">Glenwood South</div>
+            <div className="neighborhood-tag">North Hills</div>
+          </div>
+        </div>
+      </section>
+    );
+
+    const CTA = () => (
+      <section className="cta-band">
+        <h2>First Time Here?</h2>
+        <p>Get the Intro Pack and experience all three class formats. Just $40 — it's the perfect way to find your favorite workout.</p>
+        <a href="first_timer_FINAL.html" className="btn-white">Get Started</a>
+      </section>
+    );
+
+    const Footer = () => (
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-inner">
+            <span className="footer-copy">© 2026 The MEGA Workout</span>
+            <div className="footer-links-row">
+              <a href="homepage_FINAL.html">Home</a>
+              <a href="lagree_FINAL.html">Lagree</a>
+              <a href="tramp_FINAL.html">Tramp</a>
+              <a href="mat_FINAL.html">Mat</a>
+              <a href="pricing_FINAL.html">Pricing</a>
+              <a href="first_timer_FINAL.html">New Here?</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    );
+
+    const App = () => (
+      <div>
+        <Nav />
+        <Hero />
+        <StudioDetails />
+        <ClassFormats />
+        <Amenities />
+        <Neighborhoods />
+        <CTA />
+        <Footer />
+      </div>
+    );
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
