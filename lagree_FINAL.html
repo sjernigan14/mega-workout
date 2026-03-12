@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lagree Megaformer Classes — MEGA | Raleigh & Cary, NC</title>
+  <title>Lagree Megaformer Classes â MEGA | Raleigh & Cary, NC</title>
   <meta name="description" content="Experience the Lagree Method on the Megaformer at MEGA. High-intensity, low-impact total body workout. The Triangle's only Lagree studio in Raleigh and Cary.">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1" rel="stylesheet">
   <style>
-    :root { --pink: #E91E8C; --pink-light: #FFF0F5; --pink-dark: #C4167A; --teal: #2ECDA7; --teal-light: #E6FBF5; --black: #1A1A1A; --white: #FFFFFF; --gray-50: #FAFAFA; --gray-100: #F5F5F5; --gray-200: #E5E5E5; --gray-400: #A3A3A3; --gray-600: #525252; }
+    :root { --pink: #00C389;     /* MEGA Emerald â primary brand */ --pink-light: #E6F9F2; --pink-dark: #009B6A; --teal: #58F095;     /* Lime â secondary accent */ --teal-light: #EAFCE8; --black: #222223; --white: #FFFFFF; --gray-50: #FAFAFA; --gray-100: #F5F5F5; --gray-200: #E5E5E5; --gray-400: #A3A3A3; --gray-600: #525252; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', -apple-system, sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Montserrat', -apple-system, sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); }
     .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
     .nav-logo { display: flex; align-items: center; gap: 10px; }
-    .nav-logo-icon { width: 44px; height: 44px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-    .nav-logo-icon span { color: var(--black); font-weight: 900; font-size: 18px; letter-spacing: -1px; }
-    .nav-logo-text { font-weight: 900; font-size: 22px; letter-spacing: 3px; text-transform: uppercase; }
+    .nav-logo-icon { width: 36px; height: 32px; flex-shrink: 0; }
+    /* Logo mark is now SVG */
+    .nav-logo-text { font-weight: 900; font-size: 20px; letter-spacing: 4px; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; gap: 32px; }
     .nav-links a { font-size: 14px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--gray-600); transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--pink); }
     .nav-cta { background: var(--pink); color: white !important; padding: 10px 24px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.2s; }
     .nav-cta:hover { background: var(--pink-dark); }
     .btn-primary { background: var(--pink); color: white; padding: 16px 36px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.25s; display: inline-block; border: none; cursor: pointer; }
-    .btn-primary:hover { background: var(--pink-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(233,30,140,0.4); }
+    .btn-primary:hover { background: var(--pink-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,195,137,0.4); }
 
     /* PAGE HERO */
     .page-hero { padding: 140px 0 80px; background: var(--black); color: white; position: relative; overflow: hidden; }
@@ -35,15 +35,15 @@
     .page-hero-content { position: relative; z-index: 2; }
     .page-hero .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
     .page-hero .breadcrumb a { color: var(--teal); }
-    .page-hero .badge { display: inline-block; background: rgba(233,30,140,0.15); color: var(--pink); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(233,30,140,0.3); }
-    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: 60px; font-weight: 700; line-height: 1.1; max-width: 650px; margin-bottom: 20px; }
+    .page-hero .badge { display: inline-block; background: rgba(0,195,137,0.15); color: var(--pink); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(0,195,137,0.3); }
+    .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: 60px; font-weight: 700; line-height: 1.1; max-width: 650px; margin-bottom: 20px; }
     .page-hero .subtitle { font-size: 18px; color: rgba(255,255,255,0.65); max-width: 550px; line-height: 1.7; }
 
     /* WHAT IS IT */
     .what-section { padding: 80px 0; }
     .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
     .section-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--pink); margin-bottom: 12px; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; margin-bottom: 16px; line-height: 1.15; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 40px; font-weight: 700; margin-bottom: 16px; line-height: 1.15; }
     .body-text { font-size: 16px; color: var(--gray-600); line-height: 1.8; margin-bottom: 20px; }
 
     /* BENEFITS GRID */
@@ -74,7 +74,7 @@
 
     /* CTA */
     .cta-band { padding: 80px 0; background: var(--pink); text-align: center; color: white; }
-    .cta-band h2 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 16px; }
+    .cta-band h2 { font-family: 'DM Serif Display', serif; font-size: 42px; margin-bottom: 16px; }
     .cta-band p { font-size: 17px; opacity: 0.9; margin-bottom: 32px; }
     .btn-white { background: white; color: var(--pink); padding: 16px 40px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; display: inline-block; transition: all 0.25s; }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
@@ -82,7 +82,7 @@
     /* MACHINE VISUAL */
     .machine-visual { background: var(--black); border-radius: 20px; padding: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 360px; position: relative; overflow: hidden; }
     .machine-label { background: var(--teal); color: var(--black); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; }
-    .machine-title { font-family: 'Playfair Display', serif; font-size: 32px; color: white; text-align: center; margin-bottom: 12px; }
+    .machine-title { font-family: 'DM Serif Display', serif; font-size: 32px; color: white; text-align: center; margin-bottom: 12px; }
     .machine-desc { font-size: 14px; color: rgba(255,255,255,0.6); text-align: center; max-width: 300px; line-height: 1.6; }
 
     /* FOOTER */
@@ -111,8 +111,8 @@
       <nav className="nav">
         <div className="nav-inner">
           <a href="homepage_FINAL.html" className="nav-logo">
-            <div className="nav-logo-icon"><span>M</span></div>
-            <span className="nav-logo-text">Mega</span>
+            <div className="nav-logo-icon"><svg viewBox="0 0 36 32" width="36" height="32" fill="none"><g fill="white"><rect x="0" y="0" width="5" height="32"/><rect x="31" y="0" width="5" height="32"/><polygon points="5,0 10,0 18,24 13,24"/><polygon points="26,0 31,0 23,24 18,24"/></g></svg></div>
+            <span className="nav-logo-text">mega</span>
           </a>
           <div className="nav-links">
             <a href="lagree_FINAL.html" className="active">Lagree</a>
@@ -147,8 +147,8 @@
             <div>
               <div className="section-label">The Method</div>
               <div className="section-title">What Is Lagree?</div>
-              <p className="body-text">Lagree Fitness is a high-intensity, low-impact workout created by Sebastien Lagree. It's performed on the Megaformer — a spring-based resistance machine that targets every muscle group through slow, controlled movements.</p>
-              <p className="body-text">Unlike traditional Pilates, Lagree combines strength, cardio, balance, flexibility, and core training into one efficient session. The slow tempo and constant tension mean your muscles are working the entire time — no rest, no cheating, no coasting.</p>
+              <p className="body-text">Lagree Fitness is a high-intensity, low-impact workout created by Sebastien Lagree. It's performed on the Megaformer â a spring-based resistance machine that targets every muscle group through slow, controlled movements.</p>
+              <p className="body-text">Unlike traditional Pilates, Lagree combines strength, cardio, balance, flexibility, and core training into one efficient session. The slow tempo and constant tension mean your muscles are working the entire time â no rest, no cheating, no coasting.</p>
               <p className="body-text">MEGA is the Triangle's first and only Lagree studio, and our instructors are rigorously trained and certified in the Lagree Method.</p>
             </div>
             <div className="machine-visual">
@@ -163,12 +163,12 @@
 
     const Benefits = () => {
       const items = [
-        { icon: '💪', title: 'Full-Body Strength', desc: 'Every class works upper body, lower body, and core through compound movements.' },
-        { icon: '🫀', title: 'Cardio Endurance', desc: 'The slow-burn tempo keeps your heart rate elevated throughout the full 50 minutes.' },
-        { icon: '🦴', title: 'Joint-Friendly', desc: 'Zero jumping, zero impact. Spring resistance is gentle on knees, hips, and shoulders.' },
-        { icon: '🔥', title: 'Calorie Torch', desc: 'The afterburn is real. Expect to burn calories for hours after class.' },
-        { icon: '🧘', title: 'Core & Balance', desc: 'The unstable carriage forces constant core engagement and proprioceptive challenge.' },
-        { icon: '⚡', title: 'Efficient', desc: '50 minutes is all you need. No warm-up class, no cool-down class — it\'s all built in.' },
+        { icon: 'ðª', title: 'Full-Body Strength', desc: 'Every class works upper body, lower body, and core through compound movements.' },
+        { icon: 'ð«', title: 'Cardio Endurance', desc: 'The slow-burn tempo keeps your heart rate elevated throughout the full 50 minutes.' },
+        { icon: 'ð¦´', title: 'Joint-Friendly', desc: 'Zero jumping, zero impact. Spring resistance is gentle on knees, hips, and shoulders.' },
+        { icon: 'ð¥', title: 'Calorie Torch', desc: 'The afterburn is real. Expect to burn calories for hours after class.' },
+        { icon: 'ð§', title: 'Core & Balance', desc: 'The unstable carriage forces constant core engagement and proprioceptive challenge.' },
+        { icon: 'â¡', title: 'Efficient', desc: '50 minutes is all you need. No warm-up class, no cool-down class â it\'s all built in.' },
       ];
       return (
         <section className="benefits">
@@ -223,7 +223,7 @@
       const [openIdx, setOpenIdx] = useState(null);
       const faqs = [
         { q: 'Do I need experience with Pilates or Lagree?', a: 'Not at all. Every class is designed to accommodate all fitness levels. Your instructor will offer modifications and progressions throughout.' },
-        { q: 'What should I wear?', a: 'Fitted, moisture-wicking clothes work best — the Megaformer has a gliding carriage, so loose fabric can get caught. Grippy socks are required (we sell them or you can bring your own).' },
+        { q: 'What should I wear?', a: 'Fitted, moisture-wicking clothes work best â the Megaformer has a gliding carriage, so loose fabric can get caught. Grippy socks are required (we sell them or you can bring your own).' },
         { q: 'How is Lagree different from Pilates?', a: 'While inspired by Pilates principles, Lagree adds a high-intensity cardio element and uses the spring-loaded Megaformer machine. The slow tempo and constant tension create a much more challenging workout.' },
         { q: 'How often should I take class?', a: 'We recommend 3-4 times per week for optimal results. The low-impact nature means your joints can handle the frequency even if your muscles are sore.' },
         { q: 'Is it okay if I\'m pregnant?', a: 'Yes! Our instructors are trained in pre and post-natal modifications. Just let your instructor know before class so they can guide you through safe alternatives.' },
@@ -255,7 +255,7 @@
       <section className="cta-band">
         <h2>Ready to Shake?</h2>
         <p>Book your first Lagree class and see why the Megaformer is everyone's favorite machine.</p>
-        <a href="first_timer_FINAL.html" className="btn-white">Get the Intro Pack — $40</a>
+        <a href="first_timer_FINAL.html" className="btn-white">Get the Intro Pack â $40</a>
       </section>
     );
 
@@ -263,7 +263,7 @@
       <footer className="footer">
         <div className="container">
           <div className="footer-inner">
-            <span className="footer-copy">© 2026 The MEGA Workout</span>
+            <span className="footer-copy">Â© 2026 The MEGA Workout</span>
             <div className="footer-links-row">
               <a href="homepage_FINAL.html">Home</a>
               <a href="tramp_FINAL.html">Tramp</a>

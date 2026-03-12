@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MEGA | Lagree, Mat Pilates & Tramp Cardio — Raleigh & Cary, NC</title>
+  <title>MEGA | Lagree, Mat Pilates & Tramp Cardio â Raleigh & Cary, NC</title>
   <meta name="description" content="MEGA is the Triangle's only Lagree Megaformer, Mat Pilates, and Tramp Cardio studio. Two locations in Raleigh and Cary, NC. Book your first class today.">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1" rel="stylesheet">
   <style>
     :root {
-      --pink: #E91E8C;
-      --pink-light: #FFF0F5;
-      --pink-dark: #C4167A;
-      --teal: #2ECDA7;
-      --teal-light: #E6FBF5;
-      --black: #1A1A1A;
+      --pink: #00C389;     /* MEGA Emerald â primary brand */
+      --pink-light: #E6F9F2;
+      --pink-dark: #009B6A;
+      --teal: #58F095;     /* Lime â secondary accent */
+      --teal-light: #EAFCE8;
+      --black: #222223;
       --white: #FFFFFF;
       --gray-50: #FAFAFA;
       --gray-100: #F5F5F5;
@@ -28,7 +28,7 @@
       --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', -apple-system, sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Montserrat', -apple-system, sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
@@ -36,14 +36,14 @@
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); }
     .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
     .nav-logo { display: flex; align-items: center; gap: 10px; }
-    .nav-logo-icon { width: 44px; height: 44px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-    .nav-logo-icon span { color: var(--black); font-weight: 900; font-size: 18px; letter-spacing: -1px; }
-    .nav-logo-text { font-weight: 900; font-size: 22px; letter-spacing: 3px; text-transform: uppercase; }
+    .nav-logo-icon { width: 36px; height: 32px; flex-shrink: 0; }
+    /* Logo mark is now SVG */
+    .nav-logo-text { font-weight: 900; font-size: 20px; letter-spacing: 4px; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; gap: 32px; }
     .nav-links a { font-size: 14px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--gray-600); transition: color 0.2s; }
     .nav-links a:hover { color: var(--pink); }
     .nav-cta { background: var(--pink); color: white; padding: 10px 24px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.2s; border: none; cursor: pointer; }
-    .nav-cta:hover { background: var(--pink-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(233,30,140,0.3); }
+    .nav-cta:hover { background: var(--pink-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,195,137,0.3); }
 
     /* PROMO BAR */
     .promo-bar { background: var(--black); color: white; text-align: center; padding: 10px 24px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-top: 72px; }
@@ -51,16 +51,16 @@
 
     /* HERO */
     .hero { position: relative; height: 85vh; min-height: 600px; background: var(--black); overflow: hidden; display: flex; align-items: center; }
-    .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #1a1a1a 0%, #2d1a2d 50%, #1a1a2d 100%); }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #222223 0%, #2d1a2d 50%, #1a1a2d 100%); }
     .hero-pattern { position: absolute; inset: 0; opacity: 0.08; background: repeating-linear-gradient(45deg, transparent, transparent 20px, var(--pink) 20px, var(--pink) 22px); }
     .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100%; }
-    .hero-badge { display: inline-block; background: rgba(46,205,167,0.15); color: var(--teal); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 24px; border: 1px solid rgba(46,205,167,0.3); }
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: 72px; font-weight: 700; line-height: 1.05; color: white; max-width: 700px; margin-bottom: 20px; }
+    .hero-badge { display: inline-block; background: rgba(88,240,149,0.15); color: var(--teal); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 24px; border: 1px solid rgba(88,240,149,0.3); }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: 72px; font-weight: 700; line-height: 1.05; color: white; max-width: 700px; margin-bottom: 20px; }
     .hero h1 em { font-style: italic; color: var(--pink); }
     .hero-sub { font-size: 18px; color: rgba(255,255,255,0.7); max-width: 500px; line-height: 1.6; margin-bottom: 36px; }
     .hero-actions { display: flex; gap: 16px; align-items: center; }
     .btn-primary { background: var(--pink); color: white; padding: 16px 36px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.25s; display: inline-block; border: none; cursor: pointer; }
-    .btn-primary:hover { background: var(--pink-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(233,30,140,0.4); }
+    .btn-primary:hover { background: var(--pink-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,195,137,0.4); }
     .btn-outline { border: 2px solid rgba(255,255,255,0.3); color: white; padding: 14px 36px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.25s; display: inline-block; background: transparent; cursor: pointer; }
     .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
     .hero-stats { display: flex; gap: 48px; margin-top: 60px; }
@@ -71,7 +71,7 @@
     /* FORMATS */
     .formats { padding: 100px 0; background: var(--white); }
     .section-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--pink); margin-bottom: 12px; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; margin-bottom: 16px; line-height: 1.1; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 48px; font-weight: 700; margin-bottom: 16px; line-height: 1.1; }
     .section-desc { font-size: 17px; color: var(--gray-600); max-width: 560px; line-height: 1.7; margin-bottom: 56px; }
     .format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .format-card { background: var(--gray-50); border-radius: 20px; overflow: hidden; transition: all 0.3s; cursor: pointer; border: 2px solid transparent; }
@@ -97,13 +97,13 @@
     .location-card:hover { background: rgba(255,255,255,0.08); border-color: var(--teal); transform: translateY(-4px); }
     .location-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
     .location-name { font-size: 28px; font-weight: 800; }
-    .location-status { background: rgba(46,205,167,0.15); color: var(--teal); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 100px; text-transform: uppercase; letter-spacing: 1px; }
+    .location-status { background: rgba(88,240,149,0.15); color: var(--teal); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 100px; text-transform: uppercase; letter-spacing: 1px; }
     .location-address { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 6px; }
     .location-hours { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
     .location-amenities { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
     .location-amenity { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 100px; }
     .location-cta { background: var(--teal); color: var(--black); padding: 12px 28px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; display: inline-block; transition: all 0.2s; }
-    .location-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(46,205,167,0.3); }
+    .location-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(88,240,149,0.3); }
 
     /* FIRST TIMER */
     .first-timer { padding: 100px 0; background: linear-gradient(135deg, var(--pink-light) 0%, #FFF 50%, var(--teal-light) 100%); }
@@ -119,7 +119,7 @@
     .ft-visual { background: var(--black); border-radius: 24px; padding: 48px; color: white; text-align: center; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; }
     .ft-visual-pattern { position: absolute; inset: 0; opacity: 0.06; background: repeating-linear-gradient(45deg, transparent, transparent 15px, var(--pink) 15px, var(--pink) 17px); }
     .ft-visual-content { position: relative; z-index: 2; }
-    .ft-visual h3 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 12px; }
+    .ft-visual h3 { font-family: 'DM Serif Display', serif; font-size: 36px; margin-bottom: 12px; }
     .ft-visual p { color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 32px; }
     .ft-steps { display: flex; flex-direction: column; gap: 16px; text-align: left; width: 100%; max-width: 300px; }
     .ft-step { display: flex; align-items: center; gap: 14px; }
@@ -139,7 +139,7 @@
     .cta-section { padding: 100px 0; background: var(--pink); text-align: center; color: white; position: relative; overflow: hidden; }
     .cta-pattern { position: absolute; inset: 0; opacity: 0.1; background: repeating-linear-gradient(-45deg, transparent, transparent 20px, white 20px, white 22px); }
     .cta-content { position: relative; z-index: 2; }
-    .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 52px; margin-bottom: 16px; }
+    .cta-section h2 { font-family: 'DM Serif Display', serif; font-size: 52px; margin-bottom: 16px; }
     .cta-section p { font-size: 18px; opacity: 0.9; margin-bottom: 36px; }
     .btn-white { background: white; color: var(--pink); padding: 16px 40px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; display: inline-block; transition: all 0.25s; }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
@@ -191,8 +191,8 @@
         <nav className="nav" style={{ boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.08)' : 'none' }}>
           <div className="nav-inner">
             <a href="homepage_FINAL.html" className="nav-logo">
-              <div className="nav-logo-icon"><span>M</span></div>
-              <span className="nav-logo-text">Mega</span>
+              <div className="nav-logo-icon"><svg viewBox="0 0 36 32" width="36" height="32" fill="none"><g fill="white"><rect x="0" y="0" width="5" height="32"/><rect x="31" y="0" width="5" height="32"/><polygon points="5,0 10,0 18,24 13,24"/><polygon points="26,0 31,0 23,24 18,24"/></g></svg></div>
+              <span className="nav-logo-text">mega</span>
             </a>
             <div className="nav-links">
               <a href="lagree_FINAL.html">Lagree</a>
@@ -219,7 +219,7 @@
         <div className="hero-content">
           <div className="hero-badge">The Triangle's Only Lagree Studio</div>
           <h1>Workouts That Are <em>MEGA</em> Effective & MEGA Fun</h1>
-          <p className="hero-sub">Three signature formats. Two studios. One community that will push you, hype you, and make you sweat — all while having the time of your life.</p>
+          <p className="hero-sub">Three signature formats. Two studios. One community that will push you, hype you, and make you sweat â all while having the time of your life.</p>
           <div className="hero-actions">
             <a href="first_timer_FINAL.html" className="btn-primary">First Timer? Start Here</a>
             <a href="#formats" className="btn-outline">Explore Classes</a>
@@ -244,14 +244,14 @@
 
     const PromoBar = () => (
       <div className="promo-bar">
-        New to MEGA? <span>3 classes for $40</span> — Grippy socks included &rarr;
+        New to MEGA? <span>3 classes for $40</span> â Grippy socks included &rarr;
       </div>
     );
 
     const Formats = () => {
       const formats = [
-        { name: 'Lagree Megaformer', badge: 'Signature', tags: ['Full Body', 'Low Impact', 'High Intensity', 'Springs'], desc: 'The workout that started it all. 50 minutes on the Megaformer machine — slow, controlled movements that make your muscles shake in the best way possible.', link: 'lagree_FINAL.html', gradient: 'linear-gradient(135deg, #2d1a2d, #1a1a2d)' },
-        { name: 'Mega Tramp', badge: 'Cardio', tags: ['Trampoline', 'Heart-Pumping', 'Sculpt', 'Fun'], desc: 'High-energy trampoline cardio meets sculpting. Jump, bounce, and tone — all set to playlists that make you forget you\'re working out.', link: 'tramp_FINAL.html', gradient: 'linear-gradient(135deg, #1a2d1a, #1a1a2d)' },
+        { name: 'Lagree Megaformer', badge: 'Signature', tags: ['Full Body', 'Low Impact', 'High Intensity', 'Springs'], desc: 'The workout that started it all. 50 minutes on the Megaformer machine â slow, controlled movements that make your muscles shake in the best way possible.', link: 'lagree_FINAL.html', gradient: 'linear-gradient(135deg, #2d1a2d, #1a1a2d)' },
+        { name: 'Mega Tramp', badge: 'Cardio', tags: ['Trampoline', 'Heart-Pumping', 'Sculpt', 'Fun'], desc: 'High-energy trampoline cardio meets sculpting. Jump, bounce, and tone â all set to playlists that make you forget you\'re working out.', link: 'tramp_FINAL.html', gradient: 'linear-gradient(135deg, #1a2d1a, #1a1a2d)' },
         { name: 'Mega Mat', badge: 'Pilates', tags: ['Mat Pilates', 'Core', 'Flexibility', 'Heated Option'], desc: 'Classical Pilates with a MEGA twist. Build deep core strength, improve flexibility, and lengthen your muscles. Now offering Heated Mat sessions.', link: 'mat_FINAL.html', gradient: 'linear-gradient(135deg, #2d1a1a, #2d2d1a)' }
       ];
       return (
@@ -259,7 +259,7 @@
           <div className="container">
             <div className="section-label">Three Ways to Sweat</div>
             <div className="section-title">Find Your Format</div>
-            <div className="section-desc">Every class brings the vibe, the burn, and the results. Whether you want to shake on the Megaformer, bounce on the tramp, or flow on the mat — we've got you.</div>
+            <div className="section-desc">Every class brings the vibe, the burn, and the results. Whether you want to shake on the Megaformer, bounce on the tramp, or flow on the mat â we've got you.</div>
             <div className="format-grid">
               {formats.map((f, i) => (
                 <a href={f.link} key={i} className="format-card">
@@ -285,8 +285,8 @@
 
     const Locations = () => {
       const locs = [
-        { name: 'MEGA Raleigh', address: '2330 Bale Street, Suite 104', city: 'Raleigh, NC 27608', hours: 'Mon–Fri 6am–7pm · Sat–Sun 8am–12pm', status: 'Open', amenities: ['Megaformer', 'Tramp Cardio', 'Mat Pilates', 'Heated Mat', 'Retail'], link: 'raleigh_FINAL.html' },
-        { name: 'MEGA Cary', address: '249 E. Chatham Street', city: 'Cary, NC 27511', hours: 'Mon–Fri 6am–7pm · Sat–Sun 8am–12pm', status: 'Now Open!', amenities: ['Megaformer', 'Tramp Cardio', 'Mat Pilates', 'New Studio'], link: 'cary_FINAL.html' }
+        { name: 'MEGA Raleigh', address: '2330 Bale Street, Ste 104', city: 'Raleigh, NC 27608', hours: 'MonâThu 6amâ7pm Â· Fri 6amâ1pm Â· Sat 8amâ12pm Â· Sun 9amâ1pm', status: 'Open', amenities: ['Megaformer', 'Tramp Cardio', 'Mat Pilates', 'Heated Mat', 'Retail'], link: 'raleigh_FINAL.html' },
+        { name: 'MEGA Cary', address: '249 E. Chatham Street', city: 'Cary, NC 27511', hours: 'MonâThu 6amâ7pm Â· Fri 6amâ1pm Â· Sat 8amâ12pm Â· Sun 9amâ1pm', status: 'Now Open!', amenities: ['Megaformer', 'Tramp Cardio', 'Mat Pilates', 'New Studio'], link: 'cary_FINAL.html' }
       ];
       return (
         <section className="locations">
@@ -325,13 +325,13 @@
               <div className="section-title">Your First Class<br/>Is on Us (Almost)</div>
               <div className="ft-price">
                 <span className="ft-price-amount">$40</span>
-                <span className="ft-price-detail">for 3 classes · Any format · No commitment</span>
+                <span className="ft-price-detail">for 3 classes Â· Any format Â· No commitment</span>
               </div>
               <ul className="ft-perks">
-                <li><span className="ft-check">✓</span> Try all 3 class formats</li>
-                <li><span className="ft-check">✓</span> Free pair of grippy socks</li>
-                <li><span className="ft-check">✓</span> No expiration pressure — use within 30 days</li>
-                <li><span className="ft-check">✓</span> Valid at both Raleigh & Cary studios</li>
+                <li><span className="ft-check">â</span> Try all 3 class formats</li>
+                <li><span className="ft-check">â</span> Free pair of grippy socks</li>
+                <li><span className="ft-check">â</span> No expiration pressure â use within 30 days</li>
+                <li><span className="ft-check">â</span> Valid at both Raleigh & Cary studios</li>
               </ul>
               <a href="first_timer_FINAL.html" className="btn-primary">Claim Your Intro Pack</a>
             </div>
@@ -355,9 +355,9 @@
 
     const SocialProof = () => {
       const reviews = [
-        { stars: '★★★★★', text: 'I\'ve tried every boutique studio in the Triangle and nothing comes close to MEGA. The Megaformer is no joke — my arms were shaking for two days.', author: 'Sarah M.', source: 'Google Review' },
-        { stars: '★★★★★', text: 'The tramp class is the most fun I\'ve had working out in years. The music is amazing, the energy is electric, and you burn SO many calories.', author: 'Jessica T.', source: 'Google Review' },
-        { stars: '★★★★★', text: 'Finally a studio that doesn\'t take itself too seriously. The instructors are tough but the vibe is pure fun. Already bought the 10-pack.', author: 'Michael R.', source: 'Google Review' },
+        { stars: 'âââââ', text: 'I\'ve tried every boutique studio in the Triangle and nothing comes close to MEGA. The Megaformer is no joke â my arms were shaking for two days.', author: 'Sarah M.', source: 'Google Review' },
+        { stars: 'âââââ', text: 'The tramp class is the most fun I\'ve had working out in years. The music is amazing, the energy is electric, and you burn SO many calories.', author: 'Jessica T.', source: 'Google Review' },
+        { stars: 'âââââ', text: 'Finally a studio that doesn\'t take itself too seriously. The instructors are tough but the vibe is pure fun. Already bought the 10-pack.', author: 'Michael R.', source: 'Google Review' },
       ];
       return (
         <section className="social-proof">
@@ -398,8 +398,8 @@
           <div className="footer-grid">
             <div>
               <div className="nav-logo" style={{ marginBottom: 0 }}>
-                <div className="nav-logo-icon"><span>M</span></div>
-                <span className="nav-logo-text" style={{ color: 'white' }}>Mega</span>
+                <div className="nav-logo-icon"><svg viewBox="0 0 36 32" width="36" height="32" fill="none"><g fill="white"><rect x="0" y="0" width="5" height="32"/><rect x="31" y="0" width="5" height="32"/><polygon points="5,0 10,0 18,24 13,24"/><polygon points="26,0 31,0 23,24 18,24"/></g></svg></div>
+                <span className="nav-logo-text" style={{ color: 'white' }}>mega</span>
               </div>
               <p className="footer-brand-text">The Triangle's only Lagree Megaformer, Tramp Cardio, and Mat Pilates studio. Two locations. One MEGA community.</p>
             </div>
@@ -432,7 +432,7 @@
             </div>
           </div>
           <div className="footer-bottom">
-            <span className="footer-copy">© 2026 The MEGA Workout. All rights reserved.</span>
+            <span className="footer-copy">Â© 2026 The MEGA Workout. All rights reserved.</span>
             <div className="footer-social">
               <a href="#">IG</a>
               <a href="#">FB</a>
