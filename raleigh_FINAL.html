@@ -156,10 +156,23 @@
               </div>
             </div>
             <div className="map-container">
-              <div className="map-icon">📍</div>
-              <div className="map-label">Raleigh Studio Location</div>
-              <div className="map-address">2330 Bale Street Ste 104, Raleigh, NC 27608</div>
-              <a href="https://www.google.com/maps/place/2330+Bale+Street+Suite+104,+Raleigh,+NC+27608" className="btn-map" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+              <div className="map-embed">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.1!2d-78.6626!3d35.8083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5f7a2e1b3c5d%3A0x0!2s2330+Bale+St+Suite+104%2C+Raleigh%2C+NC+27608!5e0!3m2!1sen!2sus!4v1710000000000"
+                  width="100%"
+                  height="300"
+                  style={{border: 0, borderRadius: '12px'}}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="MEGA Raleigh - 2330 Bale Street Ste 104, Raleigh, NC 27608"
+                ></iframe>
+              </div>
+              <div className="map-details">
+                <div className="map-label">MEGA Raleigh</div>
+                <div className="map-address">2330 Bale Street Ste 104, Raleigh, NC 27608</div>
+                <a href="https://www.google.com/maps/place/2330+Bale+Street+Suite+104,+Raleigh,+NC+27608" className="btn-map" target="_blank" rel="noopener noreferrer">Get Directions</a>
+              </div>
             </div>
           </div>
         </div>
