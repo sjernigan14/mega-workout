@@ -1,24 +1,25 @@
 /* ===== GOOGLE FONTS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap');
 
 /* ===== CSS VARIABLES ===== */
 :root {
-  /* Colors - Properly Named */
-  --emerald: #00C389;        /* Primary brand (MEGA Emerald) */
+  /* Colors - Per MEGA Brand Style Guide */
+  --emerald: #00C389;        /* MEGA Emerald - Pantone 3395 C */
   --emerald-light: #E6F9F2;  /* Light tint for backgrounds */
   --emerald-dark: #009B6A;   /* Dark tint for hover states */
-  --lime: #58F095;           /* Secondary accent (Lime) */
+  --lime: #58F095;           /* Lime - secondary accent */
   --lime-light: #EAFCE8;     /* Light tint for accents */
+  --blue: #00A3E0;           /* MEGA Blue - Pantone 299 C */
+  --blue-light: #E5F5FC;     /* Light blue tint */
+  --pink: #F4A6D7;           /* MEGA Pink - Pantone 230 C */
+  --pink-light: #FDF0F7;     /* Light pink tint */
 
-  /* Legacy aliases for backwards compatibility */
-  --pink: #00C389;
-  --pink-light: #E6F9F2;
-  --pink-dark: #009B6A;
+  /* Legacy aliases */
   --teal: #58F095;
   --teal-light: #EAFCE8;
 
   /* Neutral colors */
-  --black: #222223;
+  --black: #222223;          /* Pantone Neutral Black */
   --white: #FFFFFF;
   --gray-50: #FAFAFA;
   --gray-100: #F5F5F5;
@@ -115,11 +116,11 @@ a {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--pink);
+  color: var(--emerald);
 }
 
 .nav-cta {
-  background: var(--pink);
+  background: var(--emerald);
   color: white !important;
   padding: 10px 24px;
   border-radius: 100px;
@@ -133,7 +134,7 @@ a {
 }
 
 .nav-cta:hover {
-  background: var(--pink-dark);
+  background: var(--emerald-dark);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 195, 137, 0.3);
 }
@@ -158,7 +159,7 @@ a {
 
 /* ===== BUTTONS ===== */
 .btn-primary {
-  background: var(--pink);
+  background: var(--emerald);
   color: white;
   padding: 16px 36px;
   border-radius: 100px;
@@ -173,7 +174,7 @@ a {
 }
 
 .btn-primary:hover {
-  background: var(--pink-dark);
+  background: var(--emerald-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 195, 137, 0.4);
 }
@@ -200,7 +201,7 @@ a {
 
 .btn-white {
   background: white;
-  color: var(--pink);
+  color: var(--emerald);
   padding: 16px 40px;
   border-radius: 100px;
   font-size: 14px;
@@ -220,8 +221,8 @@ a {
 
 .btn-secondary {
   background: white;
-  color: var(--pink);
-  border: 2px solid var(--pink);
+  color: var(--emerald);
+  border: 2px solid var(--emerald);
   padding: 14px 32px;
   border-radius: 100px;
   font-size: 13px;
@@ -234,7 +235,7 @@ a {
 }
 
 .btn-secondary:hover {
-  background: var(--pink-light);
+  background: var(--emerald-light);
 }
 
 /* ===== PROMO BAR ===== */
@@ -266,14 +267,12 @@ a {
 .page-hero-pattern {
   position: absolute;
   inset: 0;
-  opacity: 0.05;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 20px,
-    var(--pink) 20px,
-    var(--pink) 22px
-  );
+  opacity: 0.07;
+  background-image:
+    linear-gradient(135deg, var(--emerald) 25%, transparent 25%),
+    linear-gradient(225deg, var(--emerald) 25%, transparent 25%);
+  background-size: 40px 20px;
+  background-position: 0 0, 20px 0;
 }
 
 .page-hero-content {
@@ -294,7 +293,7 @@ a {
 .page-hero .badge {
   display: inline-block;
   background: rgba(0, 195, 137, 0.15);
-  color: var(--pink);
+  color: var(--emerald);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -306,7 +305,8 @@ a {
 }
 
 .page-hero h1 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 60px;
   font-weight: 700;
   line-height: 1.1;
@@ -342,13 +342,11 @@ a {
   position: absolute;
   inset: 0;
   opacity: 0.08;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 20px,
-    var(--pink) 20px,
-    var(--pink) 22px
-  );
+  background-image:
+    linear-gradient(135deg, var(--emerald) 25%, transparent 25%),
+    linear-gradient(225deg, var(--emerald) 25%, transparent 25%);
+  background-size: 40px 20px;
+  background-position: 0 0, 20px 0;
 }
 
 .hero-content {
@@ -375,7 +373,8 @@ a {
 }
 
 .hero h1 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 72px;
   font-weight: 700;
   line-height: 1.05;
@@ -386,7 +385,7 @@ a {
 
 .hero h1 em {
   font-style: italic;
-  color: var(--pink);
+  color: var(--emerald);
 }
 
 .hero-sub {
@@ -433,12 +432,13 @@ a {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--pink);
+  color: var(--emerald);
   margin-bottom: 12px;
 }
 
 .section-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -491,7 +491,7 @@ a {
 .format-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--pink);
+  border-color: var(--emerald);
 }
 
 .format-img {
@@ -510,7 +510,7 @@ a {
   position: absolute;
   top: 16px;
   left: 16px;
-  background: var(--pink);
+  background: var(--emerald);
   color: white;
   font-size: 11px;
   font-weight: 700;
@@ -545,8 +545,8 @@ a {
 }
 
 .format-tag {
-  background: var(--pink-light);
-  color: var(--pink);
+  background: var(--emerald-light);
+  color: var(--emerald);
   font-size: 11px;
   font-weight: 700;
   padding: 4px 10px;
@@ -556,7 +556,7 @@ a {
 }
 
 .format-link {
-  color: var(--pink);
+  color: var(--emerald);
   font-size: 14px;
   font-weight: 700;
   display: flex;
@@ -597,7 +597,7 @@ a {
 .benefit-icon {
   width: 56px;
   height: 56px;
-  background: var(--pink-light);
+  background: var(--emerald-light);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -688,7 +688,8 @@ a {
 }
 
 .machine-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 32px;
   color: white;
   text-align: center;
@@ -826,7 +827,7 @@ a {
 /* ===== FIRST TIMER ===== */
 .first-timer {
   padding: 100px 0;
-  background: linear-gradient(135deg, var(--pink-light) 0%, #FFF 50%, var(--teal-light) 100%);
+  background: linear-gradient(135deg, var(--emerald-light) 0%, #FFF 50%, var(--teal-light) 100%);
 }
 
 .ft-grid {
@@ -837,7 +838,7 @@ a {
 }
 
 .ft-content .section-label {
-  color: var(--pink);
+  color: var(--emerald);
 }
 
 .ft-price {
@@ -850,7 +851,7 @@ a {
 .ft-price-amount {
   font-size: 56px;
   font-weight: 900;
-  color: var(--pink);
+  color: var(--emerald);
 }
 
 .ft-price-detail {
@@ -913,8 +914,8 @@ a {
     45deg,
     transparent,
     transparent 15px,
-    var(--pink) 15px,
-    var(--pink) 17px
+    var(--emerald) 15px,
+    var(--emerald) 17px
   );
 }
 
@@ -924,7 +925,8 @@ a {
 }
 
 .ft-visual h3 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 36px;
   margin-bottom: 12px;
 }
@@ -953,7 +955,7 @@ a {
 .ft-step-num {
   width: 32px;
   height: 32px;
-  background: var(--pink);
+  background: var(--emerald);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1019,7 +1021,7 @@ a {
 /* ===== CTA SECTION & BAND ===== */
 .cta-section {
   padding: 100px 0;
-  background: var(--pink);
+  background: var(--emerald);
   text-align: center;
   color: white;
   position: relative;
@@ -1045,7 +1047,8 @@ a {
 }
 
 .cta-section h2 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 52px;
   margin-bottom: 16px;
 }
@@ -1058,13 +1061,14 @@ a {
 
 .cta-band {
   padding: 80px 0;
-  background: var(--pink);
+  background: var(--emerald);
   text-align: center;
   color: white;
 }
 
 .cta-band h2 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 42px;
   margin-bottom: 16px;
 }
@@ -1117,7 +1121,7 @@ a {
 
 .faq-toggle {
   font-size: 20px;
-  color: var(--pink);
+  color: var(--emerald);
   font-weight: 300;
   transition: transform 0.3s;
 }
@@ -1169,7 +1173,7 @@ a {
 }
 
 .footer-links a:hover {
-  color: var(--pink);
+  color: var(--emerald);
 }
 
 .footer-bottom {
@@ -1204,7 +1208,7 @@ a {
 }
 
 .footer-social a:hover {
-  background: var(--pink);
+  background: var(--emerald);
   color: white;
 }
 
@@ -1228,18 +1232,18 @@ a {
 }
 
 .footer-links-row a:hover {
-  color: var(--pink);
+  color: var(--emerald);
 }
 
 /* ===== INTRO OFFER ===== */
 .intro-offer {
   padding: 80px 0;
-  background: linear-gradient(135deg, var(--pink-light) 0%, rgba(0, 195, 137, 0.08) 100%);
+  background: linear-gradient(135deg, var(--emerald-light) 0%, rgba(0, 195, 137, 0.08) 100%);
 }
 
 .intro-card {
   background: white;
-  border: 2px solid var(--pink);
+  border: 2px solid var(--emerald);
   border-radius: 20px;
   padding: 48px;
   text-align: center;
@@ -1248,7 +1252,7 @@ a {
 
 .intro-card .badge {
   display: inline-block;
-  background: var(--pink);
+  background: var(--emerald);
   color: white;
   font-size: 12px;
   font-weight: 700;
@@ -1260,10 +1264,11 @@ a {
 }
 
 .intro-card .price {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 48px;
   font-weight: 700;
-  color: var(--pink);
+  color: var(--emerald);
   margin: 16px 0;
 }
 
@@ -1310,11 +1315,11 @@ a {
 .pricing-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
-  border-color: var(--pink);
+  border-color: var(--emerald);
 }
 
 .pricing-card.featured {
-  border: 2px solid var(--pink);
+  border: 2px solid var(--emerald);
   background: rgba(0, 195, 137, 0.02);
 }
 
@@ -1324,7 +1329,7 @@ a {
 
 .pricing-card .badge {
   display: inline-block;
-  background: var(--pink);
+  background: var(--emerald);
   color: white;
   font-size: 11px;
   font-weight: 700;
@@ -1343,10 +1348,11 @@ a {
 }
 
 .pricing-card .price {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 36px;
   font-weight: 700;
-  color: var(--pink);
+  color: var(--emerald);
   margin: 12px 0;
 }
 
@@ -1425,7 +1431,8 @@ a {
 }
 
 .membership-card .price {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 40px;
   font-weight: 700;
   color: var(--teal);
@@ -1503,9 +1510,9 @@ a {
 }
 
 .comparison-tab.active {
-  background: var(--pink);
+  background: var(--emerald);
   color: white;
-  border-color: var(--pink);
+  border-color: var(--emerald);
 }
 
 .comparison-table {
@@ -1583,7 +1590,7 @@ a {
 .addon-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border-color: var(--pink);
+  border-color: var(--emerald);
 }
 
 .addon-icon {
@@ -1598,10 +1605,11 @@ a {
 }
 
 .addon-card .price {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 32px;
   font-weight: 700;
-  color: var(--pink);
+  color: var(--emerald);
   margin: 12px 0;
 }
 
@@ -1636,7 +1644,8 @@ a {
 }
 
 .details-card h2 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 32px;
@@ -1655,7 +1664,7 @@ a {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--pink);
+  color: var(--emerald);
   margin-bottom: 8px;
 }
 
@@ -1666,13 +1675,13 @@ a {
 }
 
 .detail-value a {
-  color: var(--pink);
+  color: var(--emerald);
   font-weight: 600;
   transition: color 0.2s;
 }
 
 .detail-value a:hover {
-  color: var(--pink-dark);
+  color: var(--emerald-dark);
 }
 
 .hours-list {
@@ -1728,7 +1737,7 @@ a {
 }
 
 .btn-map {
-  background: var(--pink);
+  background: var(--emerald);
   color: white;
   padding: 12px 32px;
   border-radius: 100px;
@@ -1743,7 +1752,7 @@ a {
 }
 
 .btn-map:hover {
-  background: var(--pink-dark);
+  background: var(--emerald-dark);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 195, 137, 0.3);
 }
@@ -1775,7 +1784,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--pink-light) 0%, var(--teal-light) 100%);
+  background: linear-gradient(135deg, var(--emerald-light) 0%, var(--teal-light) 100%);
 }
 
 .gallery-placeholder-icon {
@@ -1819,7 +1828,7 @@ a {
 }
 
 .format-card.active {
-  border: 2px solid var(--pink);
+  border: 2px solid var(--emerald);
   background: rgba(0, 195, 137, 0.02);
 }
 
@@ -1841,7 +1850,7 @@ a {
 }
 
 .format-desc {
-  color: var(--pink);
+  color: var(--emerald);
   font-weight: 600;
   margin-bottom: 16px;
 }
@@ -1857,7 +1866,7 @@ a {
 }
 
 .format-link {
-  color: var(--pink);
+  color: var(--emerald);
   font-size: 14px;
   font-weight: 700;
   display: inline-block;
@@ -1926,14 +1935,14 @@ a {
 }
 
 .neighborhood-tag:hover {
-  border-color: var(--pink);
-  color: var(--pink);
+  border-color: var(--emerald);
+  color: var(--emerald);
 }
 
 /* ===== FIRST TIMER HERO OFFER ===== */
 .hero-offer {
   background: white;
-  border: 2px solid var(--pink);
+  border: 2px solid var(--emerald);
   border-radius: 12px;
   padding: 24px;
   margin: 32px 0;
@@ -1945,15 +1954,16 @@ a {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--pink);
+  color: var(--emerald);
   margin-bottom: 8px;
 }
 
 .hero-offer-price {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 48px;
   font-weight: 700;
-  color: var(--pink);
+  color: var(--emerald);
   margin: 8px 0;
 }
 
@@ -2039,7 +2049,7 @@ a {
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--pink);
+  color: var(--emerald);
   font-weight: 700;
 }
 
@@ -2091,7 +2101,7 @@ a {
   content: '•';
   position: absolute;
   left: 0;
-  color: var(--pink);
+  color: var(--emerald);
   font-weight: 700;
 }
 
@@ -2121,13 +2131,13 @@ a {
 .article-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border-color: var(--pink);
+  border-color: var(--emerald);
 }
 
 .article-card-image {
   width: 100%;
   height: 160px;
-  background: linear-gradient(135deg, var(--pink-light) 0%, var(--teal-light) 100%);
+  background: linear-gradient(135deg, var(--emerald-light) 0%, var(--teal-light) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2146,7 +2156,7 @@ a {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--pink);
+  color: var(--emerald);
   margin-bottom: 8px;
 }
 
@@ -2177,7 +2187,7 @@ a {
 }
 
 .article-link {
-  color: var(--pink);
+  color: var(--emerald);
   font-weight: 700;
   transition: gap 0.2s;
 }
@@ -2198,7 +2208,8 @@ a {
 }
 
 .article-content h2 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
   font-size: 32px;
   font-weight: 700;
   margin: 48px 0 20px;
@@ -2236,13 +2247,13 @@ a {
 }
 
 .article-content a {
-  color: var(--pink);
+  color: var(--emerald);
   font-weight: 600;
   transition: color 0.2s;
 }
 
 .article-content a:hover {
-  color: var(--pink-dark);
+  color: var(--emerald-dark);
 }
 
 .post-meta {
@@ -2260,14 +2271,14 @@ a {
 }
 
 .pull-quote {
-  border-left: 4px solid var(--pink);
+  border-left: 4px solid var(--emerald);
   padding: 24px;
   margin: 32px 0;
-  background: var(--pink-light);
+  background: var(--emerald-light);
   border-radius: 4px;
   font-size: 18px;
   font-weight: 600;
-  color: var(--pink);
+  color: var(--emerald);
   font-style: italic;
   line-height: 1.6;
 }
