@@ -3,104 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mega Tramp Cardio Classes â MEGA | Raleigh & Cary, NC</title>
-  <meta name="description" content="Experience Mega Tramp at MEGA â high-energy trampoline cardio classes combining jumping, bouncing, and sculpting with incredible music. Low-impact, full-body workout in Raleigh and Cary.">
+  <title>Mega Tramp Cardio Classes — MEGA | Raleigh & Cary, NC</title>
+  <meta name="description" content="Experience Mega Tramp at MEGA — high-energy trampoline cardio classes combining jumping, bouncing, and sculpting with incredible music. Low-impact, full-body workout in Raleigh and Cary.">
+  <meta property="og:title" content="Mega Tramp Cardio Classes — MEGA | Raleigh & Cary, NC | MEGA Workout">
+  <meta property="og:description" content="Experience Mega Tramp at MEGA — high-energy trampoline cardio classes combining jumping, bouncing, and sculpting with incredible music. Low-impact, full-body workout in Raleigh and Cary.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sjernigan14.github.io/mega-workout/tramp_FINAL.html">
+  <meta property="og:site_name" content="MEGA Workout">
+  <link rel="canonical" href="https://sjernigan14.github.io/mega-workout/tramp_FINAL.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://sjernigan14.github.io/mega-workout/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mega Tramp",
+        "item": "https://sjernigan14.github.io/mega-workout/tramp_FINAL.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need coordination or bounce experience?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at all. Bouncing is a natural movement. Our instructors teach you how to stay safe and in control. If you can walk, you can bounce."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I have bad knees or joint pain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mega Tramp is actually joint-friendly because the trampoline absorbs impact. That said, let your instructor know about any concerns — they can offer modifications like lighter bounces or staying lower on the trampoline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I wear?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fitted, breathable clothes you don't mind moving in. Sneakers with good ankle support are ideal. We provide or you can bring grip socks if you prefer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many calories do I really burn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most people burn 400-600 calories in a 45-minute class, depending on intensity and body weight. The afterburn is real — your metabolism stays elevated for hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I do Mega Tramp if I'm a beginner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We encourage beginners. The trampoline makes it accessible, and you control your own intensity — bounce gently or go all out, it's your class."
+        }
+      }
+    ]
+  }
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1" rel="stylesheet">
-  <style>
-    :root { --pink: #00C389;     /* MEGA Emerald â primary brand */ --pink-light: #E6F9F2; --pink-dark: #009B6A; --teal: #58F095;     /* Lime â secondary accent */ --teal-light: #EAFCE8; --black: #222223; --white: #FFFFFF; --gray-50: #FAFAFA; --gray-100: #F5F5F5; --gray-200: #E5E5E5; --gray-400: #A3A3A3; --gray-600: #525252; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Montserrat', -apple-system, sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
-    a { text-decoration: none; color: inherit; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); }
-    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
-    .nav-logo { display: flex; align-items: center; gap: 10px; }
-    .nav-logo-icon { width: 36px; height: 32px; flex-shrink: 0; }
-    /* Logo mark is now SVG */
-    .nav-logo-text { font-weight: 900; font-size: 20px; letter-spacing: 4px; text-transform: uppercase; }
-    .nav-links { display: flex; align-items: center; gap: 32px; }
-    .nav-links a { font-size: 14px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--gray-600); transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--pink); }
-    .nav-cta { background: var(--pink); color: white !important; padding: 10px 24px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.2s; }
-    .nav-cta:hover { background: var(--pink-dark); }
-    .btn-primary { background: var(--pink); color: white; padding: 16px 36px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all 0.25s; display: inline-block; border: none; cursor: pointer; }
-    .btn-primary:hover { background: var(--pink-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,195,137,0.4); }
-
-    /* PAGE HERO */
-    .page-hero { padding: 140px 0 80px; background: var(--black); color: white; position: relative; overflow: hidden; }
-    .page-hero-pattern { position: absolute; inset: 0; opacity: 0.05; background: repeating-linear-gradient(45deg, transparent, transparent 20px, var(--pink) 20px, var(--pink) 22px); }
-    .page-hero-content { position: relative; z-index: 2; }
-    .page-hero .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
-    .page-hero .breadcrumb a { color: var(--teal); }
-    .page-hero .badge { display: inline-block; background: rgba(0,195,137,0.15); color: var(--pink); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(0,195,137,0.3); }
-    .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: 60px; font-weight: 700; line-height: 1.1; max-width: 650px; margin-bottom: 20px; }
-    .page-hero .subtitle { font-size: 18px; color: rgba(255,255,255,0.65); max-width: 550px; line-height: 1.7; }
-
-    /* WHAT IS IT */
-    .what-section { padding: 80px 0; }
-    .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .section-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--pink); margin-bottom: 12px; }
-    .section-title { font-family: 'DM Serif Display', serif; font-size: 40px; font-weight: 700; margin-bottom: 16px; line-height: 1.15; }
-    .body-text { font-size: 16px; color: var(--gray-600); line-height: 1.8; margin-bottom: 20px; }
-
-    /* BENEFITS GRID */
-    .benefits { padding: 80px 0; background: var(--gray-50); }
-    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-    .benefit-card { background: white; border-radius: 16px; padding: 32px; text-align: center; transition: all 0.3s; }
-    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
-    .benefit-icon { width: 56px; height: 56px; background: var(--pink-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px; }
-    .benefit-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
-    .benefit-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
-
-    /* WHAT TO EXPECT */
-    .expect { padding: 80px 0; }
-    .expect-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
-    .expect-step { text-align: center; padding: 24px; }
-    .expect-num { width: 48px; height: 48px; background: var(--teal); color: var(--black); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; margin: 0 auto 16px; }
-    .expect-step h3 { font-size: 16px; font-weight: 800; margin-bottom: 8px; }
-    .expect-step p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
-
-    /* FAQ */
-    .faq { padding: 80px 0; background: var(--gray-50); }
-    .faq-list { max-width: 700px; margin: 48px auto 0; }
-    .faq-item { background: white; border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
-    .faq-q { padding: 20px 24px; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
-    .faq-q:hover { background: var(--gray-50); }
-    .faq-a { padding: 0 24px 20px; font-size: 15px; color: var(--gray-600); line-height: 1.7; }
-    .faq-toggle { font-size: 20px; color: var(--pink); font-weight: 300; transition: transform 0.3s; }
-
-    /* CTA */
-    .cta-band { padding: 80px 0; background: var(--pink); text-align: center; color: white; }
-    .cta-band h2 { font-family: 'DM Serif Display', serif; font-size: 42px; margin-bottom: 16px; }
-    .cta-band p { font-size: 17px; opacity: 0.9; margin-bottom: 32px; }
-    .btn-white { background: white; color: var(--pink); padding: 16px 40px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; display: inline-block; transition: all 0.25s; }
-    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-
-    /* MACHINE VISUAL */
-    .machine-visual { background: var(--black); border-radius: 20px; padding: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 360px; position: relative; overflow: hidden; }
-    .machine-label { background: var(--teal); color: var(--black); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; }
-    .machine-title { font-family: 'DM Serif Display', serif; font-size: 32px; color: white; text-align: center; margin-bottom: 12px; }
-    .machine-desc { font-size: 14px; color: rgba(255,255,255,0.6); text-align: center; max-width: 300px; line-height: 1.6; }
-
-    /* FOOTER */
-    .footer { background: var(--black); color: white; padding: 48px 0 24px; }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
-    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.4); }
-    .footer-links-row { display: flex; gap: 24px; }
-    .footer-links-row a { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.2s; }
-    .footer-links-row a:hover { color: var(--pink); }
-
-    @media (max-width: 768px) {
-      .page-hero h1 { font-size: 36px; }
-      .what-grid { grid-template-columns: 1fr; }
-      .benefits-grid { grid-template-columns: 1fr; }
-      .expect-steps { grid-template-columns: 1fr 1fr; }
-      .nav-links { display: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="root"></div>
@@ -122,6 +104,7 @@
             <a href="cary_FINAL.html">Cary</a>
             <a href="first_timer_FINAL.html">New Here?</a>
             <a href="pricing_FINAL.html">Pricing</a>
+            <a href="blog_index.html">Blog</a>
             <a href="#" className="nav-cta">Book a Class</a>
           </div>
         </div>
@@ -135,7 +118,7 @@
           <div className="breadcrumb"><a href="homepage_FINAL.html">Home</a> / Classes / Mega Tramp</div>
           <div className="badge">Cardio Format</div>
           <h1>Mega Tramp</h1>
-          <p className="subtitle">High-energy trampoline cardio that combines jumping, bouncing, and sculpting exercises set to incredible playlists. Low-impact. Maximum fun. Pure cardio joy.</p>
+          <p className="subtitle">45 minutes of pure joy on a trampoline with music that hits, bounces that feel effortless, and a natural high that lasts all day. This is cardio that doesn't feel like punishment.</p>
         </div>
       </section>
     );
@@ -147,9 +130,9 @@
             <div>
               <div className="section-label">The Workout</div>
               <div className="section-title">What Is Mega Tramp?</div>
-              <p className="body-text">Mega Tramp is 45 minutes of pure cardio joy on professional-grade mini trampolines. It's a high-energy fusion of cardio intervals, sculpting with light weights, and music that will make you forget you're exercising.</p>
-              <p className="body-text">Your feet never leave the trampoline. You'll bounce, jump, and move through choreographed sequences that build endurance while the trampoline's give absorbs impact and protects your joints. Light hand weights add upper-body sculpting without slowing down the cardio work.</p>
-              <p className="body-text">It's inclusive, challenging, and above all â it's FUN. Whether you're a beginner or a fitness enthusiast, Mega Tramp delivers the cardio blast you want with the beginner-friendly modifications you might need.</p>
+              <p className="body-text">Mega Tramp is 45 minutes of pure cardio joy. You're bouncing on a professional-grade mini trampoline with music that slaps, moving through choreographed sequences that feel less like "working out" and more like dancing on air.</p>
+              <p className="body-text">Your feet stay on the mat. The trampoline does the impact absorption—your joints stay safe, your heart rate climbs, and those endorphins? They're real. Light hand weights sculpt your upper body while the cardio part handles the rest. It's a full-body takeover without the joint pain.</p>
+              <p className="body-text">Here's the real tea: if you can walk, you can bounce. If you want to go hard, the trampoline has you. This is cardio for everyone—whether you're a first-timer or a fitness beast. That natural high hits different at Mega Tramp.</p>
             </div>
             <div className="machine-visual">
               <div className="machine-label">The Machine</div>
@@ -163,12 +146,12 @@
 
     const Benefits = () => {
       const items = [
-        { icon: 'â¡', title: 'Cardio Blast', desc: 'Heart-pounding intervals that build cardiovascular endurance and leave you breathless.' },
-        { icon: 'ð¦µ', title: 'Low Impact on Joints', desc: 'The trampoline absorbs impact, making it ideal for knees, hips, and ankles while delivering serious cardio.' },
-        { icon: 'ðª', title: 'Total Body Tone', desc: 'Light weights and body-weight resistance sculpt while you bounce â arms, core, and legs all working.' },
-        { icon: 'ð', title: 'Mood Booster', desc: 'Endorphins + music + bouncing = pure joy. This is cardio that feels like play, not punishment.' },
-        { icon: 'ð¥', title: 'Calorie Burn', desc: '500+ calories per 45-minute class. Trampoline work elevates your metabolic rate.' },
-        { icon: 'ð±', title: 'Beginner Friendly', desc: 'Stay on the trampoline, modify the height or intensity, and go at your own pace. No jumping required.' },
+        { icon: '⚡', title: 'Your Heart Will Thank You', desc: 'Heart-pounding intervals that build real cardiovascular strength. You\'ll feel the burn in the best way.' },
+        { icon: '🦵', title: 'Joints Stay Happy', desc: 'The trampoline absorbs the impact. Your knees, hips, ankles—all protected while you\'re getting serious cardio.' },
+        { icon: '💪', title: 'Full-Body Sculpt', desc: 'Light weights, your body weight, constant movement. Arms. Core. Legs. Everything tones at once.' },
+        { icon: '😊', title: 'Pure Joy (Seriously)', desc: 'Music + bouncing + endorphins = natural high. This is cardio that feels like play, not punishment.' },
+        { icon: '🔥', title: 'Serious Calorie Burn', desc: 'You\'ll torch 400-600 calories in 45 minutes. The afterburn keeps that metabolic fire going for hours.' },
+        { icon: '🌱', title: 'Everyone Belongs Here', desc: 'First-timer? Fitness beast? Doesn\'t matter. Bounce gently or bounce hard. It\'s your class, your pace.' },
       ];
       return (
         <section className="benefits">
@@ -193,10 +176,10 @@
 
     const Expect = () => {
       const steps = [
-        { title: 'Arrive & Setup', desc: 'Check in, grab your trampoline spot, and get fitted with any hand weights if needed.' },
-        { title: 'Warm Up', desc: '5 minutes of easy bouncing and dynamic stretches to get your body ready and your heart engaged.' },
-        { title: 'The Cardio', desc: '35 minutes of choreographed cardio intervals, sculpting bursts, and rhythm-driven movement.' },
-        { title: 'Cool & Stretch', desc: 'Easy bouncing to bring heart rate down, then a proper cool-down stretch and high-five moment.' },
+        { title: 'Claim Your Spot', desc: 'Check in, grab your trampoline, grab your weights (if you want). Get ready to bounce.' },
+        { title: 'Easy Bounce In', desc: '5 minutes of easy bouncing and dynamic stretches. Your body wakes up. Your heart starts working.' },
+        { title: 'The Energy Happens', desc: '35 minutes of choreographed intervals set to music that moves you. You\'ll lose track of time.' },
+        { title: 'Float Down Gently', desc: 'Cool-down bouncing, stretching, and breathing. You\'ll float off that trampoline riding that natural high.' },
       ];
       return (
         <section className="expect">
@@ -222,11 +205,11 @@
     const FAQ = () => {
       const [openIdx, setOpenIdx] = useState(null);
       const faqs = [
-        { q: 'Do I need coordination or bounce experience?', a: 'Not at all. Bouncing is a natural movement. Our instructors teach you how to stay safe and in control. If you can walk, you can bounce.' },
-        { q: 'What if I have bad knees or joint pain?', a: 'Mega Tramp is actually joint-friendly because the trampoline absorbs impact. That said, let your instructor know about any concerns â they can offer modifications like lighter bounces or staying lower on the trampoline.' },
-        { q: 'What should I wear?', a: 'Fitted, breathable clothes you don\'t mind moving in. Sneakers with good ankle support are ideal. We provide or you can bring grip socks if you prefer.' },
-        { q: 'How many calories do I really burn?', a: 'Most people burn 400-600 calories in a 45-minute class, depending on intensity and body weight. The afterburn is real â your metabolism stays elevated for hours.' },
-        { q: 'Can I do Mega Tramp if I\'m a beginner?', a: 'Absolutely. We encourage beginners. The trampoline makes it accessible, and you control your own intensity â bounce gently or go all out, it\'s your class.' },
+        { q: 'Do I need coordination or bounce experience?', a: 'Nope. Bouncing is natural. Your body knows how to do it. Our instructors teach you safe, effective technique. Literally: if you can walk, you can bounce.' },
+        { q: 'What if I have bad knees or joint pain?', a: 'Mega Tramp is actually built for your joints. The trampoline absorbs all the impact. Tell your instructor what\'s up and they\'ll show you lighter bounces or modifications that work for you.' },
+        { q: 'What should I wear?', a: 'Fitted, breathable clothes. Good sneakers or grip socks with ankle support. Basically: wear something you don\'t mind sweating in.' },
+        { q: 'How many calories do I really burn?', a: '400-600 in 45 minutes depending on you. And that afterburn? It\'s real. Your metabolism stays elevated for hours. You\'re still winning at your desk.' },
+        { q: 'Can I do Mega Tramp if I\'m a beginner?', a: 'Yes. This is where beginners belong. You control the intensity—bounce easy or bounce hard. The trampoline meets you exactly where you are.' },
       ];
       return (
         <section className="faq">
@@ -255,7 +238,7 @@
       <section className="cta-band">
         <h2>Ready to Bounce?</h2>
         <p>Book your first Mega Tramp class and experience the cardio that doesn't feel like work.</p>
-        <a href="first_timer_FINAL.html" className="btn-white">Get the Intro Pack â $40</a>
+        <a href="first_timer_FINAL.html" className="btn-white">Get the Intro Pack — $40</a>
       </section>
     );
 
@@ -263,13 +246,14 @@
       <footer className="footer">
         <div className="container">
           <div className="footer-inner">
-            <span className="footer-copy">Â© 2026 The MEGA Workout</span>
+            <span className="footer-copy">© 2026 The MEGA Workout</span>
             <div className="footer-links-row">
               <a href="homepage_FINAL.html">Home</a>
               <a href="tramp_FINAL.html">Tramp</a>
               <a href="mat_FINAL.html">Mat</a>
               <a href="pricing_FINAL.html">Pricing</a>
               <a href="first_timer_FINAL.html">New Here?</a>
+              <a href="blog_index.html">Blog</a>
             </div>
           </div>
         </div>
