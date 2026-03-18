@@ -111,7 +111,7 @@
       <section className="article-body">
         <div className="container">
           <div className="article-content">
-            <p>So you're thinking about your first <a href="lagree_FINAL.html">Lagree Megaformer class</a>. Cool. Nervous? Totally normal. Let's walk you through everything from check-in to post-class glow. We promise you've got this.</p>
+            <p>So you are thinking about your first <a href="lagree_FINAL.html">Lagree Megaformer class</a>. Cool. Nervous? Totally normal. Not sure what <a href="blog_lagree-vs-pilates.html">Lagree is exactly</a>? We got you. Let us walk you through everything from check-in to post-class glow. We promise you have got this.</p>
 
             <h2>Before You Arrive</h2>
 
@@ -187,9 +187,32 @@
 
             <h2>Ready to Get Into It?</h2>
 
-            <p>Your first class is where the magic starts. We offer the <a href="pricing_FINAL.html">3-Class Intro Pack for $40</a> so you can try Lagree without the commitment stress. Our instructors get it. They've seen first-timers transform.</p>
+            <p>Your first class is where the magic starts. We offer the <a href="pricing_FINAL.html">3-Class Intro Pack for $40</a> so you can try Lagree without the commitment stress. Our instructors get it. They have seen first-timers transform.</p>
 
-            <p><a href="first_timer_FINAL.html">Check our First Timer page for more</a>, and let's get you on the Megaformer. Your body's going to thank you.</p>
+            <p><a href="blog_new-to-mega-guide.html">Check out our complete new member guide</a> for more details, and <a href="first_timer_FINAL.html">visit our First Timer page</a> to get you on the Megaformer. Your body is going to thank you.</p>
+          </div>
+        </div>
+      </section>
+    );
+
+    const RelatedPosts = () => (
+      <section style={{padding: '60px 0', background: 'var(--gray-50)'}}>
+        <div className="container">
+          <div style={{textAlign: 'center', marginBottom: '36px'}}>
+            <div className="section-label">Keep Reading</div>
+            <h2 style={{fontFamily: "'Bebas Neue', sans-serif", fontSize: '36px', letterSpacing: '1px'}}>Related Articles</h2>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px'}}>
+            {[
+              {title: 'Lagree vs Pilates: What is the Difference?', slug: 'blog_lagree-vs-pilates.html', category: 'Fitness Comparison'},
+              {title: 'New to MEGA? Complete Guide', slug: 'blog_new-to-mega-guide.html', category: 'New Member'},
+              {title: 'MEGA Cary: Your Neighborhood Studio', slug: 'blog_cary-downtown-guide.html', category: 'Local Guide'}
+            ].map((post, i) => (
+              <a key={i} href={post.slug} style={{background: 'white', borderRadius: '12px', padding: '24px', border: '1px solid var(--gray-200)', textDecoration: 'none', color: 'inherit', transition: 'all 0.3s'}}>
+                <div style={{fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--emerald)', marginBottom: '8px'}}>{post.category}</div>
+                <div style={{fontSize: '16px', fontWeight: 700, lineHeight: 1.3, color: 'var(--black)'}}>{post.title}</div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -197,7 +220,7 @@
 
     const CTA = () => (
       <section className="cta-band">
-        <h2>Let's Get You Shaking</h2>
+        <h2>Let us Get You Shaking</h2>
         <p>Your intro pack is 3 classes for $40. Zero pressure. All gain.</p>
         <a href="first_timer_FINAL.html" className="btn-white">Get the Intro Pack — $40</a>
       </section>
@@ -226,6 +249,7 @@
         <Nav />
         <Hero />
         <Article />
+        <RelatedPosts />
         <CTA />
         <Footer />
       </div>

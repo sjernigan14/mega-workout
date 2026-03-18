@@ -121,7 +121,7 @@
 
             <h3>Lagree Megaformer</h3>
 
-            <p>50 minutes of high-intensity, low-impact strength on the Megaformer. Slow. Controlled. The burn is real. You'll shake, you'll sweat, you'll feel like you actually did something. No experience needed—modifications exist for everyone. Want details? <a href="blog_lagree-vs-pilates.html">Read our Lagree vs Pilates breakdown</a>.</p>
+            <p>50 minutes of high-intensity, low-impact strength on the Megaformer. Slow. Controlled. The burn is real. You will shake, you will sweat, you will feel like you actually did something. No experience needed—modifications exist for everyone. <a href="blog_first-megaformer-class.html">Want to know what to expect in your first class</a>? We have you covered.</p>
 
             <h3>Trampoline Cardio</h3>
 
@@ -137,11 +137,11 @@
 
             <h3>Raleigh</h3>
 
-            <p>Central location. Free parking. Brand-new Megaformers, professional-grade rebounders, amazing community. <a href="raleigh_FINAL.html">Check out our Raleigh page for more</a>.</p>
+            <p>Central location. Free parking. Brand-new Megaformers, professional-grade rebounders, amazing community. <a href="blog_raleigh-five-points-guide.html">Check out our Raleigh Five Points guide for more</a>.</p>
 
             <h3>Cary</h3>
 
-            <p>Same quality classes and instruction. Cary's fitness hub. <a href="cary_FINAL.html">Learn more on our Cary page</a>.</p>
+            <p>Same quality classes and instruction. Cary is fitness hub. <a href="blog_cary-downtown-guide.html">Learn more on our Cary downtown guide</a>.</p>
 
             <h2>How to Book</h2>
 
@@ -202,10 +202,33 @@
       </section>
     );
 
+    const RelatedPosts = () => (
+      <section style={{padding: '60px 0', background: 'var(--gray-50)'}}>
+        <div className="container">
+          <div style={{textAlign: 'center', marginBottom: '36px'}}>
+            <div className="section-label">Keep Reading</div>
+            <h2 style={{fontFamily: "'Bebas Neue', sans-serif", fontSize: '36px', letterSpacing: '1px'}}>Related Articles</h2>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px'}}>
+            {[
+              {title: 'What to Expect at Your First Megaformer Class', slug: 'blog_first-megaformer-class.html', category: 'First Timer'},
+              {title: 'Lagree vs Pilates: What is the Difference?', slug: 'blog_lagree-vs-pilates.html', category: 'Fitness Comparison'},
+              {title: 'MEGA Cary: Your Neighborhood Studio', slug: 'blog_cary-downtown-guide.html', category: 'Local Guide'}
+            ].map((post, i) => (
+              <a key={i} href={post.slug} style={{background: 'white', borderRadius: '12px', padding: '24px', border: '1px solid var(--gray-200)', textDecoration: 'none', color: 'inherit', transition: 'all 0.3s'}}>
+                <div style={{fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--emerald)', marginBottom: '8px'}}>{post.category}</div>
+                <div style={{fontSize: '16px', fontWeight: 700, lineHeight: 1.3, color: 'var(--black)'}}>{post.title}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+
     const CTA = () => (
       <section className="cta-band">
         <h2>Welcome to MEGA</h2>
-        <p>Your intro pack is 3 classes for $40. That's it. No contracts. Let's go.</p>
+        <p>Your intro pack is 3 classes for $40. That is it. No contracts. Let us go.</p>
         <a href="pricing_FINAL.html" className="btn-white">Book Your Intro Pack</a>
       </section>
     );
@@ -233,6 +256,7 @@
         <Nav />
         <Hero />
         <Article />
+        <RelatedPosts />
         <CTA />
         <Footer />
       </div>

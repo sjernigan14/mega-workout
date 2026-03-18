@@ -144,15 +144,38 @@
             <p>You can rebound gently or hard. You can add moves or keep it simple. First-timer? You can rebound. Athlete? You can make it serious. Recovering from something? You can do it with modifications. The trampoline meets you where you are and lets you progress at your pace.</p>
 
             <h2>MEGA Tramp: Where Rebounding Becomes a Workout</h2>
-            <p><a href="tramp_FINAL.html">MEGA Tramp Cardio</a> is rebounding with full production. High-energy playlists. Coaching that keeps you moving. Sculpting moves that build strength. Fifty minutes that feel like they go by fast because you are having fun and working hard at the same time. The owner recently noted that it only takes around 8 minutes of rebounding to turn your body on. We just make sure you stay there for the full 50.</p>
+            <p><a href="blog_trampoline-cardio.html">MEGA Tramp Cardio</a> is rebounding with full production. High-energy playlists. Coaching that keeps you moving. Sculpting moves that build strength. Fifty minutes that feel like they go by fast because you are having fun and working hard at the same time. The owner recently noted that it only takes around 8 minutes of rebounding to turn your body on. We just make sure you stay there for the full 50.</p>
 
             <h2>Why Now?</h2>
             <p>People are tired of working out in ways that hurt. They want cardio that does not destroy their knees. They want to build strength. They want to feel good mentally. Rebounding delivers on all three. The science supports it. The results prove it. The people doing it are hooked.</p>
 
             <h2>Ready to Bounce?</h2>
-            <p>Check out <a href="first_timer_FINAL.html">what to expect in your first class</a>. See <a href="pricing_FINAL.html">pricing and packages</a>. Then get on the trampoline and feel the difference.</p>
+            <p>Check out <a href="first_timer_FINAL.html">what to expect in your first class</a>. See <a href="pricing_FINAL.html">pricing and packages</a>. Or combine rebounding with <a href="blog_lagree-for-runners.html">Lagree for complete cross-training</a>. Then get on the trampoline and feel the difference.</p>
 
             <p><em>Sources: <a href="https://www.nytimes.com/2022/11/11/well/move/trampoline-exercise-health-benefits.html" target="_blank" rel="noopener noreferrer">Bouncing Your Way to Better Health — The New York Times</a> | <a href="https://www.womenshealthmag.com/uk/fitness/fat-loss/a70756121/rebounding-weight-loss-benefits/" target="_blank" rel="noopener noreferrer">Rebounding for Weight Loss — Women's Health</a></em></p>
+          </div>
+        </div>
+      </section>
+    );
+
+    const RelatedPosts = () => (
+      <section style={{padding: '60px 0', background: 'var(--gray-50)'}}>
+        <div className="container">
+          <div style={{textAlign: 'center', marginBottom: '36px'}}>
+            <div className="section-label">Keep Reading</div>
+            <h2 style={{fontFamily: "'Bebas Neue', sans-serif", fontSize: '36px', letterSpacing: '1px'}}>Related Articles</h2>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px'}}>
+            {[
+              {title: 'Trampoline Cardio: Low-Impact HIIT', slug: 'blog_trampoline-cardio.html', category: 'Cardio'},
+              {title: '5 Reasons Runners Should Try Lagree', slug: 'blog_lagree-for-runners.html', category: 'For Athletes'},
+              {title: 'What to Expect at Your First Megaformer Class', slug: 'blog_first-megaformer-class.html', category: 'First Timer'}
+            ].map((post, i) => (
+              <a key={i} href={post.slug} style={{background: 'white', borderRadius: '12px', padding: '24px', border: '1px solid var(--gray-200)', textDecoration: 'none', color: 'inherit', transition: 'all 0.3s'}}>
+                <div style={{fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--emerald)', marginBottom: '8px'}}>{post.category}</div>
+                <div style={{fontSize: '16px', fontWeight: 700, lineHeight: 1.3, color: 'var(--black)'}}>{post.title}</div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -189,6 +212,7 @@
         <Nav />
         <Hero />
         <Article />
+        <RelatedPosts />
         <CTA />
         <Footer />
       </div>

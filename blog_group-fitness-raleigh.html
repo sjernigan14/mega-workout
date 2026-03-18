@@ -144,9 +144,9 @@
 
             <div className="pull-quote">MEGA is literally the only studio in the Triangle dedicated exclusively to Lagree on the Megaformer.</div>
 
-            <p>Traditional Pilates is great—low-impact, controlled, core-focused. But it's a different beast than <a href="lagree_FINAL.html">Lagree</a>. Lagree is high-intensity, full-body, muscle-building, all in 50 minutes.</p>
+            <p>Traditional Pilates is great—low-impact, controlled, core-focused. But it is a different beast than <a href="blog_lagree-vs-pilates.html">Lagree</a>. Lagree is high-intensity, full-body, muscle-building, all in 50 minutes.</p>
 
-            <p><a href="raleigh_FINAL.html">MEGA Raleigh</a> is the only place in the Triangle for Lagree. We're 100% dedicated to the Megaformer and the Method. Want high-intensity strength training with zero impact? You're looking at MEGA. That's it.</p>
+            <p><a href="blog_raleigh-five-points-guide.html">MEGA Raleigh</a> is the only place in the Triangle for Lagree. We are 100% dedicated to the Megaformer and the Method. Want high-intensity strength training with zero impact? You are looking at <a href="blog_diamond-awards-2026.html">MEGA, the award-winning studio</a>. That is it.</p>
 
             <h2>Why MEGA's the Move</h2>
 
@@ -176,10 +176,33 @@
       </section>
     );
 
+    const RelatedPosts = () => (
+      <section style={{padding: '60px 0', background: 'var(--gray-50)'}}>
+        <div className="container">
+          <div style={{textAlign: 'center', marginBottom: '36px'}}>
+            <div className="section-label">Keep Reading</div>
+            <h2 style={{fontFamily: "'Bebas Neue', sans-serif", fontSize: '36px', letterSpacing: '1px'}}>Related Articles</h2>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px'}}>
+            {[
+              {title: 'MEGA Raleigh: Five Points Guide', slug: 'blog_raleigh-five-points-guide.html', category: 'Local Guide'},
+              {title: 'MEGA Raleigh Wins Gold: Diamond Awards 2026', slug: 'blog_diamond-awards-2026.html', category: 'Studio News'},
+              {title: 'Lagree vs Pilates: What is the Difference?', slug: 'blog_lagree-vs-pilates.html', category: 'Fitness Comparison'}
+            ].map((post, i) => (
+              <a key={i} href={post.slug} style={{background: 'white', borderRadius: '12px', padding: '24px', border: '1px solid var(--gray-200)', textDecoration: 'none', color: 'inherit', transition: 'all 0.3s'}}>
+                <div style={{fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--emerald)', marginBottom: '8px'}}>{post.category}</div>
+                <div style={{fontSize: '16px', fontWeight: 700, lineHeight: 1.3, color: 'var(--black)'}}>{post.title}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+
     const CTA = () => (
       <section className="cta-band">
-        <h2>Try Lagree. See What You're Missing.</h2>
-        <p>Intro pack is 3 classes for $40. Raleigh's only pure Lagree studio.</p>
+        <h2>Try Lagree. See What You are Missing.</h2>
+        <p>Intro pack is 3 classes for $40. Raleigh is only pure Lagree studio.</p>
         <a href="pricing_FINAL.html" className="btn-white">Get the Intro Pack — $40</a>
       </section>
     );
@@ -207,6 +230,7 @@
         <Nav />
         <Hero />
         <Article />
+        <RelatedPosts />
         <CTA />
         <Footer />
       </div>

@@ -111,7 +111,7 @@
       <section className="article-body">
         <div className="container">
           <div className="article-content">
-            <p>You're a runner. Cross-training matters. But between cycling and elliptical work, Lagree keeps getting overlooked. Here's the thing: Lagree isn't another workout—it's the piece your running game is missing.</p>
+            <p>You are a runner. Cross-training matters. But between cycling and elliptical work, Lagree keeps getting overlooked. Here is the thing: <a href="blog_lagree-vs-pilates.html">Lagree is not just another workout—it is the piece your running game is missing</a>.</p>
 
             <h2>1. Injury Prevention & Balance</h2>
 
@@ -137,9 +137,9 @@
 
             <h2>5. Recovery That Maintains Fitness</h2>
 
-            <p>The dilemma: you need recovery days but don't want to lose fitness. Lagree fixes it. Low-impact = safe on easy days without adding fatigue. You get strength and resilience without impact stress.</p>
+            <p>The dilemma: you need recovery days but do not want to lose fitness. Lagree fixes it. Low-impact = safe on easy days without adding fatigue. You get strength and resilience without impact stress.</p>
 
-            <p>Easy run + Lagree afternoon = aerobic conditioning from the run, strength and stability from Lagree, enough stimulus to keep fitness while your nervous system recovers. Win.</p>
+            <p>Easy run + Lagree afternoon = aerobic conditioning from the run, strength and stability from Lagree, enough stimulus to keep fitness while your nervous system recovers. Plus, <a href="blog_rebounding-health-benefits.html">cross-training with Tramp cardio on alternate days</a> gives you variety without repetitive impact. Win.</p>
 
             <h2>The Ideal Runner's Training Plan</h2>
 
@@ -167,10 +167,33 @@
       </section>
     );
 
+    const RelatedPosts = () => (
+      <section style={{padding: '60px 0', background: 'var(--gray-50)'}}>
+        <div className="container">
+          <div style={{textAlign: 'center', marginBottom: '36px'}}>
+            <div className="section-label">Keep Reading</div>
+            <h2 style={{fontFamily: "'Bebas Neue', sans-serif", fontSize: '36px', letterSpacing: '1px'}}>Related Articles</h2>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px'}}>
+            {[
+              {title: 'Lagree vs Pilates: What is the Difference?', slug: 'blog_lagree-vs-pilates.html', category: 'Fitness Comparison'},
+              {title: 'What to Expect at Your First Megaformer Class', slug: 'blog_first-megaformer-class.html', category: 'First Timer'},
+              {title: 'The Science Behind Rebounding: Health Benefits', slug: 'blog_rebounding-health-benefits.html', category: 'Fitness Science'}
+            ].map((post, i) => (
+              <a key={i} href={post.slug} style={{background: 'white', borderRadius: '12px', padding: '24px', border: '1px solid var(--gray-200)', textDecoration: 'none', color: 'inherit', transition: 'all 0.3s'}}>
+                <div style={{fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--emerald)', marginBottom: '8px'}}>{post.category}</div>
+                <div style={{fontSize: '16px', fontWeight: 700, lineHeight: 1.3, color: 'var(--black)'}}>{post.title}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+
     const CTA = () => (
       <section className="cta-band">
         <h2>Your Legs Will Thank You</h2>
-        <p>Stronger. Faster. Injury-proof. That's the Lagree promise for runners.</p>
+        <p>Stronger. Faster. Injury-proof. That is the Lagree promise for runners.</p>
         <a href="lagree_FINAL.html" className="btn-white">Try Lagree</a>
       </section>
     );
@@ -198,6 +221,7 @@
         <Nav />
         <Hero />
         <Article />
+        <RelatedPosts />
         <CTA />
         <Footer />
       </div>

@@ -127,7 +127,7 @@
             <p>Pilates? You can do it anywhere—mat, Reformer, whatever. Lagree? It's Megaformer or nothing. And that's intentional. The Megaformer's springs, gliding carriage, handles, and platforms give you way more resistance options than traditional Pilates. It's designed to make you shake.</p>
 
             <h3>2. Intensity</h3>
-            <p>Pilates? Moderate, accessible to everyone. Lagree? High-intensity from minute one. First-timers feel the burn immediately. Slow movement plus constant spring tension equals 50 minutes of muscles working hard with basically no break. The burn is real.</p>
+            <p>Pilates? Moderate, accessible to everyone. Lagree? High-intensity from minute one. <a href="blog_first-megaformer-class.html">First-timers feel the burn immediately</a>. Slow movement plus constant spring tension equals 50 minutes of muscles working hard with basically no break. The burn is real.</p>
 
             <div className="pull-quote">Lagree is Pilates that said "let's get spicy" and never looked back.</div>
 
@@ -148,10 +148,11 @@
 
             <p><strong>Lagree</strong> is your vibe if you:</p>
             <ul>
-              <li>Want a real challenge and you're ready for it</li>
+              <li>Want a real challenge and you are ready for it</li>
               <li>Need full-body strength training that actually works</li>
               <li>Love intensity but hate impact on your joints</li>
               <li>Want to build muscle and torch calories in 50 minutes</li>
+              <li>Are <a href="blog_lagree-for-runners.html">an athlete looking to cross-train without impact</a></li>
             </ul>
 
             <h2>The Verdict: Can You Do Both?</h2>
@@ -160,6 +161,29 @@
             <p>Bottom line: Lagree is Pilates that leveled up. Both work. Different goals, different vibes, same commitment to moving your body the right way.</p>
 
             <p>Want to try Lagree? <a href="first_timer_FINAL.html">Check our First Timer page to see what you're getting into</a>, and let's get you <a href="pricing_FINAL.html">booked</a>.</p>
+          </div>
+        </div>
+      </section>
+    );
+
+    const RelatedPosts = () => (
+      <section style={{padding: '60px 0', background: 'var(--gray-50)'}}>
+        <div className="container">
+          <div style={{textAlign: 'center', marginBottom: '36px'}}>
+            <div className="section-label">Keep Reading</div>
+            <h2 style={{fontFamily: "'Bebas Neue', sans-serif", fontSize: '36px', letterSpacing: '1px'}}>Related Articles</h2>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px'}}>
+            {[
+              {title: 'What to Expect at Your First Megaformer Class', slug: 'blog_first-megaformer-class.html', category: 'First Timer'},
+              {title: '5 Reasons Runners Should Try Lagree', slug: 'blog_lagree-for-runners.html', category: 'For Athletes'},
+              {title: 'New to MEGA? Complete Guide', slug: 'blog_new-to-mega-guide.html', category: 'New Member'}
+            ].map((post, i) => (
+              <a key={i} href={post.slug} style={{background: 'white', borderRadius: '12px', padding: '24px', border: '1px solid var(--gray-200)', textDecoration: 'none', color: 'inherit', transition: 'all 0.3s'}}>
+                <div style={{fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--emerald)', marginBottom: '8px'}}>{post.category}</div>
+                <div style={{fontSize: '16px', fontWeight: 700, lineHeight: 1.3, color: 'var(--black)'}}>{post.title}</div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -196,6 +220,7 @@
         <Nav />
         <Hero />
         <Article />
+        <RelatedPosts />
         <CTA />
         <Footer />
       </div>

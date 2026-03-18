@@ -121,7 +121,7 @@
 
             <h2>What We Offer at MEGA Cary</h2>
             <p><strong>Lagree Megaformer</strong> is the main event. 50 minutes of serious strength and muscle-building on the machine that was literally designed to make you shake. Slow, controlled, relentless. It works.</p>
-            <p><strong>Tramp Cardio</strong> is rebounding with sculpting. High-energy, killer playlist, full-body burn. Eight minutes in and you get it.</p>
+            <p><strong>Tramp Cardio</strong> is rebounding with sculpting. High-energy, killer playlist, full-body burn. <a href="blog_rebounding-health-benefits.html">The science shows rebounding delivers serious fitness results</a> without the joint impact. Eight minutes in and you get it.</p>
             <p><strong>Mat Pilates</strong> is your flexibility and recovery play. Core work, breathing, mobility. The thing your body needs after you leave the Megaformer.</p>
 
             <div className="pull-quote">5.0 stars on Google. Real people. Real results. Real community.</div>
@@ -130,8 +130,31 @@
             <p>We have a 5.0 rating on Google with real reviews from real people. They talk about the challenging classes, the welcoming vibe, the modifications Alicia (our owner) and the instructors provide. First timer? You will get modifications. Your level? You will get challenged. That is the balance.</p>
 
             <h2>Ready to Experience MEGA Cary?</h2>
-            <p>We have you covered. Check out our <a href="first_timer_FINAL.html">First Timer guide</a> to see exactly what to expect. Want the full picture on what Lagree is? <a href="lagree_FINAL.html">Read this</a>. Curious about pricing and packages? <a href="pricing_FINAL.html">We got that too</a>.</p>
+            <p>We have you covered. Check out our <a href="first_timer_FINAL.html">First Timer guide</a> to see exactly what to expect. If you are in Raleigh, <a href="blog_raleigh-five-points-guide.html">check out our Raleigh location</a> for comparison. Curious about pricing and packages? <a href="pricing_FINAL.html">We got that too</a>.</p>
             <p>See you at 249 E Chatham Street.</p>
+          </div>
+        </div>
+      </section>
+    );
+
+    const RelatedPosts = () => (
+      <section style={{padding: '60px 0', background: 'var(--gray-50)'}}>
+        <div className="container">
+          <div style={{textAlign: 'center', marginBottom: '36px'}}>
+            <div className="section-label">Keep Reading</div>
+            <h2 style={{fontFamily: "'Bebas Neue', sans-serif", fontSize: '36px', letterSpacing: '1px'}}>Related Articles</h2>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px'}}>
+            {[
+              {title: 'MEGA Raleigh: Five Points Guide', slug: 'blog_raleigh-five-points-guide.html', category: 'Local Guide'},
+              {title: 'What to Expect at Your First Megaformer Class', slug: 'blog_first-megaformer-class.html', category: 'First Timer'},
+              {title: 'The Science Behind Rebounding: Health Benefits', slug: 'blog_rebounding-health-benefits.html', category: 'Fitness Science'}
+            ].map((post, i) => (
+              <a key={i} href={post.slug} style={{background: 'white', borderRadius: '12px', padding: '24px', border: '1px solid var(--gray-200)', textDecoration: 'none', color: 'inherit', transition: 'all 0.3s'}}>
+                <div style={{fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--emerald)', marginBottom: '8px'}}>{post.category}</div>
+                <div style={{fontSize: '16px', fontWeight: 700, lineHeight: 1.3, color: 'var(--black)'}}>{post.title}</div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -168,6 +191,7 @@
         <Nav />
         <Hero />
         <Article />
+        <RelatedPosts />
         <CTA />
         <Footer />
       </div>
