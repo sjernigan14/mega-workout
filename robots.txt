@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://sjernigan14.github.io/mega-workout/sitemap.xml
