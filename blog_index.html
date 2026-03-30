@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ============================================
+       TRACKING & ANALYTICS
+       GA4: G-Y0VK90NM7L  |  FB Pixel: 418307172364408
+       ============================================ -->
+
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0VK90NM7L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y0VK90NM7L');
+  </script>
+
+  <!-- Meta (Facebook) Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '418307172364408');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=418307172364408&ev=PageView&noscript=1"/></noscript>
+
+  <!-- Google Tag Manager (FUTURE — container not yet created)
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | MEGA Workout — Fitness Tips, Lagree & Studio News</title>
+  <title>Blog | MEGA Workout â Fitness Tips, Lagree & Studio News</title>
   <meta name="description" content="MEGA Workout blog covers Lagree Fitness tips, trampoline cardio workouts, mat Pilates guides, and Raleigh studio news. Discover fitness insights from the Triangle's premier boutique fitness studio.">
-  <meta property="og:title" content="MEGA Workout Blog — Fitness Tips & Studio News">
+  <meta property="og:title" content="MEGA Workout Blog â Fitness Tips & Studio News">
   <meta property="og:description" content="Discover Lagree Fitness, trampoline cardio, and mat Pilates tips. Read MEGA Workout's latest fitness insights and studio updates.">
   <meta property="og:image" content="https://sjernigan14.github.io/mega-workout/og-image.jpg">
   <meta property="og:url" content="https://sjernigan14.github.io/mega-workout/blog_index.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MEGA Workout">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MEGA Workout Blog — Fitness Tips & Studio News">
+  <meta name="twitter:title" content="MEGA Workout Blog â Fitness Tips & Studio News">
   <meta name="twitter:description" content="Discover Lagree Fitness, trampoline cardio, and mat Pilates tips. Read MEGA Workout's latest fitness insights and studio updates.">
   <link rel="canonical" href="https://sjernigan14.github.io/mega-workout/blog_index.html">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
@@ -86,7 +123,7 @@
     const BlogGrid = () => {
       const articles = [
         {
-          icon: '🏋️',
+          icon: 'ðï¸',
           category: 'Fitness Comparison',
           title: 'Lagree vs Pilates: What\'s the Difference?',
           excerpt: 'Both are legit. But one is slow, controlled, and spicy. The other? Same DNA, different vibe. Here\'s what you need to know.',
@@ -94,7 +131,7 @@
           slug: 'blog_lagree-vs-pilates.html'
         },
         {
-          icon: '🏆',
+          icon: 'ð',
           category: 'Studio News',
           title: 'MEGA Raleigh Wins Gold: 2026 Midtown Diamond Awards',
           excerpt: 'Voted Best Yoga or Pilates Studio in the Triangle. Coach Alicia Belle took Bronze for Best Wellness Coach. Thank you to everyone who voted.',
@@ -102,7 +139,7 @@
           slug: 'blog_diamond-awards-2026.html'
         },
         {
-          icon: '🏘️',
+          icon: 'ðï¸',
           category: 'Local Guide',
           title: 'MEGA Cary: Your Neighborhood Studio in Downtown Cary',
           excerpt: 'Steps from the new Downtown Cary Park. Free parking next door. Lagree, Tramp, and Mat for Irongate, Scottish Hills, Walnut Hills, and Umstead Hotel guests.',
@@ -110,7 +147,7 @@
           slug: 'blog_cary-downtown-guide.html'
         },
         {
-          icon: '📍',
+          icon: 'ð',
           category: 'Local Guide',
           title: 'MEGA Raleigh: Lagree and Pilates in the Heart of Five Points',
           excerpt: 'Right next to Raleigh Iron Works. Walking distance from Hayes Barton, Mordecai, and Bloomsbury. Small classes. Big results. Gold-winning studio.',
@@ -118,7 +155,7 @@
           slug: 'blog_raleigh-five-points-guide.html'
         },
         {
-          icon: '🧬',
+          icon: 'ð§¬',
           category: 'Fitness Science',
           title: 'The Science Behind Rebounding: Why Trampoline Workouts Work',
           excerpt: '68% less joint stress than running. Burns up to 800 calories per hour. Boosts lymphatic flow and bone density. The research behind MEGA Tramp.',
@@ -126,7 +163,7 @@
           slug: 'blog_rebounding-health-benefits.html'
         },
         {
-          icon: '🎯',
+          icon: 'ð¯',
           category: 'First Timer',
           title: 'What to Expect at Your First Megaformer Class',
           excerpt: 'Nervous is normal. Excited is better. We walk you through the shake, the burn, the vibe, and why your first timer pack is worth it.',
@@ -134,15 +171,15 @@
           slug: 'blog_first-megaformer-class.html'
         },
         {
-          icon: '🏙️',
+          icon: 'ðï¸',
           category: 'Local Guide',
           title: 'Best Group Fitness Studios in Raleigh, NC (2026)',
-          excerpt: 'Raleigh\'s fitness scene is popping. We broke down every studio—and yeah, we\'re gonna tell you why MEGA is the standout. (No spoilers: it\'s the vibe.)',
+          excerpt: 'Raleigh\'s fitness scene is popping. We broke down every studioâand yeah, we\'re gonna tell you why MEGA is the standout. (No spoilers: it\'s the vibe.)',
           readTime: '7 min read',
           slug: 'blog_group-fitness-raleigh.html'
         },
         {
-          icon: '🦘',
+          icon: 'ð¦',
           category: 'Cardio',
           title: 'Trampoline Cardio: The Natural High You\'re Missing',
           excerpt: 'You want to sweat, you want speed, you want fun. Trampoline cardio is literally that. Bouncy, spicy, zero regrets.',
@@ -150,7 +187,7 @@
           slug: 'blog_trampoline-cardio.html'
         },
         {
-          icon: '🏃',
+          icon: 'ð',
           category: 'For Athletes',
           title: '5 Reasons Runners Should Try Lagree',
           excerpt: 'Your running game is good. Lagree will make it spicy. Stronger legs, better form, fewer injuries. Your PR is calling.',
@@ -158,7 +195,7 @@
           slug: 'blog_lagree-for-runners.html'
         },
         {
-          icon: '📚',
+          icon: 'ð',
           category: 'New Member',
           title: 'New to MEGA? Here\'s Your Complete Guide',
           excerpt: 'First time here? We\'ve got you. Three formats. One vibe. Everything you need to show up, shake, and feel like you belong.',
@@ -184,7 +221,7 @@
                     <p className="article-excerpt">{article.excerpt}</p>
                     <div className="article-meta">
                       <span>{article.readTime}</span>
-                      <a href={article.slug} className="article-link">Read More →</a>
+                      <a href={article.slug} className="article-link">Read More â</a>
                     </div>
                   </div>
                 </div>
@@ -199,7 +236,7 @@
       <footer className="footer">
         <div className="container">
           <div className="footer-inner">
-            <span className="footer-copy">© 2026 The MEGA Workout</span>
+            <span className="footer-copy">Â© 2026 The MEGA Workout</span>
             <div className="footer-links-row">
               <a href="homepage_FINAL.html">Home</a>
               <a href="lagree_FINAL.html">Lagree</a>

@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ============================================
+       TRACKING & ANALYTICS
+       GA4: G-Y0VK90NM7L  |  FB Pixel: 418307172364408
+       ============================================ -->
+
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0VK90NM7L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y0VK90NM7L');
+  </script>
+
+  <!-- Meta (Facebook) Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '418307172364408');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=418307172364408&ev=PageView&noscript=1"/></noscript>
+
+  <!-- Google Tag Manager (FUTURE — container not yet created)
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New to MEGA? Get Started with Our $40 Intro Pack | Raleigh & Cary</title>
@@ -60,7 +97,7 @@
         "name": "What's the cancellation policy?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can cancel or reschedule classes up to 12 hours before the scheduled start time. No cancellation fees. If you need to cancel within 12 hours, you'll lose the class credit, but it's no big deal—we all have emergencies."
+          "text": "You can cancel or reschedule classes up to 12 hours before the scheduled start time. No cancellation fees. If you need to cancel within 12 hours, you'll lose the class credit, but it's no big dealâwe all have emergencies."
         }
       },
       {
@@ -134,11 +171,11 @@
         <div className="container page-hero-content">
           <div className="badge">Welcome to MEGA</div>
           <h1>New to MEGA?</h1>
-          <p className="subtitle">Ready to shake? The Triangle's only spot for Lagree, Tramp, and Mat — try all three for $40 and find your format.</p>
+          <p className="subtitle">Ready to shake? The Triangle's only spot for Lagree, Tramp, and Mat â try all three for $40 and find your format.</p>
           <div className="hero-offer">
             <div className="hero-offer-label">Your Intro Pack</div>
             <div className="hero-offer-price">$40</div>
-            <div className="hero-offer-detail">3 Classes • Any Format • Any Location</div>
+            <div className="hero-offer-detail">3 Classes â¢ Any Format â¢ Any Location</div>
             <div className="hero-offer-detail">Free Grippy Socks Included</div>
           </div>
           <a href="https://themegaworkout.com/schedule/?_mt=%2Fschedule%2Fdaily%2F48541%3Flocations%3D48717" className="btn-primary" target="_blank" rel="noopener noreferrer">Book Your Intro Pack</a>
@@ -148,12 +185,12 @@
 
     const OfferDetails = () => {
       const items = [
-        { icon: '🎓', title: '3 Classes', desc: 'Mix and match Lagree, Tramp, or Mat. Whatever vibes you.' },
-        { icon: '📍', title: 'Both Locations', desc: 'Go to Raleigh or Cary — your intro works everywhere.' },
-        { icon: '⏱️', title: '60-Day Window', desc: 'Use your classes whenever you\'re ready within 60 days.' },
-        { icon: '🧦', title: 'Free Grippy Socks', desc: 'The iconic grip socks. Included and ready to go.' },
-        { icon: '✓', title: 'No Strings', desc: 'No auto-charge. No commitment. Pure community vibes.' },
-        { icon: '💪', title: 'All Levels Welcome', desc: 'First timers to gym rats — modifications for everyone.' },
+        { icon: 'ð', title: '3 Classes', desc: 'Mix and match Lagree, Tramp, or Mat. Whatever vibes you.' },
+        { icon: 'ð', title: 'Both Locations', desc: 'Go to Raleigh or Cary â your intro works everywhere.' },
+        { icon: 'â±ï¸', title: '60-Day Window', desc: 'Use your classes whenever you\'re ready within 60 days.' },
+        { icon: 'ð§¦', title: 'Free Grippy Socks', desc: 'The iconic grip socks. Included and ready to go.' },
+        { icon: 'â', title: 'No Strings', desc: 'No auto-charge. No commitment. Pure community vibes.' },
+        { icon: 'ðª', title: 'All Levels Welcome', desc: 'First timers to gym rats â modifications for everyone.' },
       ];
       return (
         <section className="offer-details">
@@ -181,21 +218,21 @@
       const formats = [
         {
           name: 'Lagree',
-          icon: '⚙️',
+          icon: 'âï¸',
           desc: 'The classic. Intense + controlled.',
           details: 'Slow and shaky on the Megaformer. 50 minutes of muscle-shaking tension. Every cell fires.',
           link: 'lagree_FINAL.html',
         },
         {
           name: 'Tramp',
-          icon: '🦘',
+          icon: 'ð¦',
           desc: 'Elevation vibes. Natural high.',
           details: 'Jump your way to the rush. 30 minutes of bouncing cardio. Low-impact. High energy. Spicy sweats.',
           link: 'tramp_FINAL.html',
         },
         {
           name: 'Mat',
-          icon: '🧘',
+          icon: 'ð§',
           desc: 'Core work that hits. Controlled burn.',
           details: 'Heated mat Pilates. 45 minutes of core focus and functional strength. You\'ll feel stronger.',
           link: 'mat_FINAL.html',
@@ -220,7 +257,7 @@
                   <h3>{fmt.name}</h3>
                   <p className="format-desc">{fmt.desc}</p>
                   <div className="format-details">{fmt.details}</div>
-                  <a href={fmt.link} className="format-link">Learn More →</a>
+                  <a href={fmt.link} className="format-link">Learn More â</a>
                 </div>
               ))}
             </div>
@@ -234,7 +271,7 @@
         {
           phase: 'Before Class',
           items: [
-            'Book on our app or online — easy',
+            'Book on our app or online â easy',
             'Wear fitted, moisture-wicking gear',
             'Come 10 minutes early. We\'ll set you up.',
             'No experience needed. Our instructors got you.',
@@ -289,17 +326,17 @@
         {
           title: 'What to Wear',
           items: [
-            'Keep it fitted — the carriage moves and loose fabric will too',
+            'Keep it fitted â the carriage moves and loose fabric will too',
             'Moisture-wicking is your friend',
             'Sports bra or supportive top recommended',
             'Leggings, shorts, or fitted pants work',
-            'Layer up — temperatures change',
+            'Layer up â temperatures change',
           ],
         },
         {
           title: 'What to Bring',
           items: [
-            'Grippy socks — included and non-negotiable',
+            'Grippy socks â included and non-negotiable',
             'Water bottle (hydration is real)',
             'Towel if you sweat like you mean it',
             'No shoes. Socks or barefoot only.',
@@ -344,7 +381,7 @@
         },
         {
           q: 'What\'s the cancellation policy?',
-          a: 'You can cancel or reschedule classes up to 12 hours before the scheduled start time. No cancellation fees. If you need to cancel within 12 hours, you\'ll lose the class credit, but it\'s no big deal—we all have emergencies.',
+          a: 'You can cancel or reschedule classes up to 12 hours before the scheduled start time. No cancellation fees. If you need to cancel within 12 hours, you\'ll lose the class credit, but it\'s no big dealâwe all have emergencies.',
         },
         {
           q: 'Do I need to bring anything besides myself?',
@@ -395,7 +432,7 @@
       <footer className="footer">
         <div className="container">
           <div className="footer-inner">
-            <span className="footer-copy">© 2026 The MEGA Workout</span>
+            <span className="footer-copy">Â© 2026 The MEGA Workout</span>
             <div className="footer-links-row">
               <a href="homepage_FINAL.html">Home</a>
               <a href="lagree_FINAL.html">Lagree</a>
